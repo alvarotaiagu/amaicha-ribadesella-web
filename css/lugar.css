@@ -74,13 +74,13 @@
   background: linear-gradient(to top, color-mix(in oklab, var(--l-fondo) 82%, transparent), color-mix(in oklab, var(--l-fondo) 0%, transparent));
   pointer-events: none;
 }
-.lugar .lugar__paradas li { position: relative; padding-top: 18px; opacity: .45; transition: opacity .5s ease; }
+.lugar .lugar__paradas li { position: relative; padding-top: 18px; opacity: .62; transition: opacity .5s ease; }
 .lugar .lugar__paradas li::before {
   content: ""; position: absolute; left: 1px; top: 2px; width: 8px; height: 8px;
   border: 1px solid currentColor; transform: rotate(45deg); transition: background-color .5s ease;
 }
 .lugar .lugar__paradas li::after { content: ""; position: absolute; left: 18px; right: 0; top: 6px; height: 1px; background: var(--l-linea); }
-.lugar .lugar__paradas li.es-pasada { opacity: .6; }
+.lugar .lugar__paradas li.es-pasada { opacity: .78; }
 .lugar .lugar__paradas li.es-pasada::before { background: currentColor; }
 .lugar .lugar__paradas li.es-actual { opacity: 1; }
 .lugar .lugar__paradas li.es-actual::before { background: var(--l-marca); border-color: var(--l-marca); }
@@ -91,7 +91,7 @@
   position: absolute; z-index: 4; left: clamp(16px, 4vw, 56px); right: clamp(16px, 4vw, 56px); bottom: 14px;
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
 }
-.lugar .lugar__pie3d .lugar__ahora { margin: 0; font-size: .78rem; color: var(--l-suave); }
+.lugar .lugar__pie3d .lugar__ahora { margin: 0; font-size: .86rem; color: var(--l-suave); }
 .lugar .lugar__aviso {
   position: absolute; z-index: 4; left: 50%; top: 50%; transform: translate(-50%, -50%); margin: 0;
   padding: .5em 1em; background: var(--l-chip); font-size: .85rem;
@@ -125,7 +125,7 @@
 .lugar .lugar__finca .lugar__marco { aspect-ratio: 1 / 1; }
 .lugar .lugar__marco > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; display: block; }
 .lugar .lugar__finca .lugar__marco > img { object-position: 50% 50%; }
-.lugar figcaption { margin-top: .6em; font-size: .82rem; line-height: 1.45; color: var(--l-suave); }
+.lugar figcaption { margin-top: .6em; font-size: .9rem; line-height: 1.45; color: var(--l-suave); }
 /* la noche de ahora, sobre la vista dibujada */
 .lugar .lugar__noche {
   position: absolute; inset: 0; pointer-events: none;
@@ -153,10 +153,10 @@
 .lugar .lugar__pasos li::before { content: ""; position: absolute; left: 1px; top: 2px; width: 8px; height: 8px; border: 1px solid var(--l-marca); transform: rotate(45deg); }
 .lugar .lugar__pasos li::after { content: ""; position: absolute; left: 18px; right: 0; top: 6px; height: 1px; background: var(--l-linea); }
 .lugar .lugar__pasos b { display: block; font-family: var(--letra-titular, inherit); font-weight: 600; font-size: 1.05rem; }
-.lugar .lugar__pasos span { display: block; margin-top: .3em; font-size: .88rem; line-height: 1.45; color: var(--l-suave); }
-.lugar .lugar__planob > .lugar__ahora { grid-area: ahora; margin: 0; font-size: .88rem; color: var(--l-suave); }
+.lugar .lugar__pasos span { display: block; margin-top: .3em; font-size: .95rem; line-height: 1.5; color: var(--l-suave); }
+.lugar .lugar__planob > .lugar__ahora { grid-area: ahora; margin: 0; font-size: .95rem; color: var(--l-suave); }
 .lugar .lugar__acciones { grid-area: acciones; margin: 0; justify-self: end; }
-.lugar .lugar__fuente { margin: 14px 0 0; font-size: .72rem; line-height: 1.45; color: var(--l-suave); max-width: 110ch; }
+.lugar .lugar__fuente { margin: 14px 0 0; font-size: .78rem; line-height: 1.5; color: var(--l-suave); max-width: 110ch; }
 .lugar[data-modo="3d"] .lugar__fuente { margin-top: 10px; }
 
 /* ---------- móvil ---------- */

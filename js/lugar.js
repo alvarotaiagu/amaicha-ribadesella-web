@@ -360,6 +360,13 @@
         li.style.left = x.toFixed(1) + 'px'; li.style.top = y.toFixed(1) + 'px';
         li.classList.toggle('a-la-izq', x > W * 0.7);
       });
+      // si dos rótulos se pisan (los acantilados y Amaicha están a pocos metros), el de la izquierda se va a su izquierda
+      var vis = [].filter.call(el.querySelectorAll('.lugar__vista .lugar__marca'), function (li) { return !li.hidden; })
+        .sort(function (a, b) { return parseFloat(a.style.left) - parseFloat(b.style.left); });
+      for (var i = 0; i < vis.length; i++) for (var j = i + 1; j < vis.length; j++) {
+        var a = vis[i].firstElementChild.getBoundingClientRect(), b = vis[j].firstElementChild.getBoundingClientRect();
+        if (a.right > b.left - 6 && a.left < b.right + 6 && a.bottom > b.top - 2 && a.top < b.bottom + 2) vis[i].classList.add('a-la-izq');
+      }
     }
 
     function ponModo(m) {

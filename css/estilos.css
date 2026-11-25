@@ -5,7 +5,7 @@
    ===================================================================== */
 
 /* ---------- el rombo pequeño (marca de «activo»: un cuadrado girado, como el centro de la greca) ---------- */
-.rombo, .formas__sel [role="tab"]::before, .estancias__indice a::before, .esc__lista li::before, .desayuno__lista li + li::before {
+.rombo, .formas__sel [role="tab"]::before, .estancias__indice a::before, .esc__lista li::before, .desayuno__lista li::before {
   content: ''; display: inline-block; width: .5em; height: .5em; background: currentColor; transform: rotate(45deg); flex: none;
 }
 
@@ -167,12 +167,14 @@ body.menu .cab .marca__greca { background: var(--marca-clara); }
 .desayuno { background: var(--prado); }
 .desayuno__in { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
 .desayuno__f .foto-btn { aspect-ratio: 4 / 4.4; }
-.desayuno__lista { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .9rem; margin-top: 1.8rem; font: 300 clamp(1.6rem, 1.1rem + 1.9vw, 2.8rem)/1.25 var(--letra-titular); font-stretch: 112%; letter-spacing: -.01em; }
-.desayuno__lista li { display: inline-flex; align-items: center; gap: .9rem; }
-.desayuno__lista li + li::before { width: .26em; height: .26em; color: var(--greca); }
+/* una cosa por renglón, en dos columnas, con hilo entre renglones: se lee de un vistazo */
+.desayuno__lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(1.4rem, 3vw, 2.6rem); margin-top: 1.8rem; font: 400 clamp(1.15rem, 1rem + .55vw, 1.5rem)/1.3 var(--letra-titular); font-stretch: 104%; }
+.desayuno__lista li { display: flex; align-items: center; gap: .85rem; padding: .95rem 0; border-top: 1px solid var(--linea); }
+.desayuno__lista li::before { width: .38em; height: .38em; color: var(--greca); }
+@media (max-width: 479px) { .desayuno__lista { grid-template-columns: 1fr; } }
 .desayuno__nota { margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid var(--linea); color: var(--texto-suave); max-width: 32rem; }
 @media (max-width: 799px) { .desayuno__in { grid-template-columns: 1fr; } .desayuno__f .foto-btn { aspect-ratio: 4 / 3; } }
-.densidad-sobria .desayuno__lista { font-size: clamp(1.2rem, 1rem + .8vw, 1.6rem); }
+.densidad-sobria .desayuno__lista { font-size: clamp(1.05rem, 1rem + .3vw, 1.25rem); }
 
 /* =====================================================================
    4. LA CASA POR ESTANCIAS: índice fijo + filas de alturas iguales
@@ -213,6 +215,13 @@ body.menu .cab .marca__greca { background: var(--marca-clara); }
 /* contrato con Lugar 3D: su escenario es sticky (ningún antepasado con overflow, transform ni filter), el div va a todo
    el ancho y se le dice el alto de la cabecera fija; el plan B lleva respiro lateral */
 #lugar { --lugar-arriba: var(--cabecera); }
+/* la sección es oscura: las variables comunes que lee el módulo, en su versión para fondo monte
+   (sin esto, el módulo pintaba texto monte sobre monte y gris oscuro sobre verde oscuro) */
+#lugar {
+  --fondo: var(--monte); --texto: var(--claro); --texto-suave: var(--claro-suave);
+  --linea: var(--linea-clara); --marca: var(--marca-clara);
+  --superficie: color-mix(in oklab, var(--niebla) 6%, var(--monte));
+}
 .lugar [data-modulo="lugar"][data-modo="plano"] { padding-inline: var(--gutter); }
 .lugar .sec-txt { color: var(--claro-suave); }
 .lugar__cab { margin-bottom: clamp(2rem, 4vw, 3rem); }
