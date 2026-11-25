@@ -254,6 +254,87 @@ body.menu .cab .marca__greca { background: var(--marca-clara); }
 @media (max-width: 599px) { .escalera { grid-template-columns: 1fr; } .esc--2, .esc--4 { margin-top: 0; } .alrededor__f .foto-btn { aspect-ratio: 4 / 3; } }
 .densidad-sobria .esc--2, .densidad-sobria .esc--3, .densidad-sobria .esc--4 { margin-top: 0; }
 
+/* ---------- el mapa (js/alrededor.js): la lista es el mando, el mapa dibuja la ruta ---------- */
+.con-mapa .esc { margin-top: 0; }
+.con-mapa .esc__lista { gap: .2rem; margin-top: .7rem; }
+.con-mapa .esc__lista li { display: block; }
+.con-mapa .esc__lista li::before { display: none; }
+.esc__btn { display: grid; grid-template-columns: auto 1fr; column-gap: .7rem; row-gap: .25rem; align-items: center; width: 100%; margin: 0; padding: .7rem .9rem .75rem; border: 0; border-left: 3px solid transparent; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; transition: background-color .25s var(--ease), border-color .25s var(--ease); }
+.esc__btn::before { content: ''; width: 7px; height: 7px; background: var(--greca); transform: rotate(45deg); transition: background-color .25s var(--ease); }
+.esc__btn:hover { background: color-mix(in oklab, var(--prado) 70%, transparent); }
+.esc__btn[aria-pressed="true"] { background: var(--prado); border-left-color: var(--teja); }
+.esc__btn[aria-pressed="true"]::before { background: var(--teja); }
+
+.con-mapa .mapa { position: relative; }
+.mapa__lienzo { position: relative; overflow: hidden; background: var(--prado); box-shadow: 0 0 0 1px var(--linea); }
+.mapa__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; --px: 10; }
+.m-agua { fill: var(--monte); }
+.m-isla { fill: var(--prado); }
+.m-costa { fill: none; stroke: color-mix(in oklab, var(--greca) 55%, var(--prado)); stroke-width: calc(var(--px) * 1); }
+.m-picos { fill: color-mix(in oklab, var(--greca) 16%, var(--prado)); stroke: var(--greca); stroke-width: calc(var(--px) * 1); stroke-dasharray: calc(var(--px) * 4) calc(var(--px) * 3); }
+.m-ruta { fill: none; stroke: color-mix(in oklab, var(--monte) 22%, var(--prado)); stroke-width: calc(var(--px) * 1.4); stroke-linejoin: round; stroke-linecap: round; transition: stroke .25s var(--ease); }
+.m-ruta.es-vista { stroke: color-mix(in oklab, var(--teja) 60%, var(--prado)); stroke-width: calc(var(--px) * 2.2); }
+.m-ruta.es-elegida { stroke: transparent; }
+.m-sel, .m-sel-casco { fill: none; stroke-linejoin: round; stroke-linecap: round; stroke-dasharray: 1 1; }
+.m-sel { stroke: var(--teja); stroke-width: calc(var(--px) * 3.4); }
+.m-sel-casco { stroke: var(--niebla); stroke-width: calc(var(--px) * 7); opacity: .9; }
+.m-sel-pie { fill: none; stroke: var(--monte); stroke-width: calc(var(--px) * 2.2); stroke-dasharray: calc(var(--px) * 1) calc(var(--px) * 5); stroke-linecap: round; opacity: 0; transition: opacity .6s var(--ease); }
+.m-sel-pie.se-ve { opacity: .85; }
+
+.mapa__marcas { position: absolute; inset: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.mapa__marca { position: absolute; left: 0; top: 0; width: 0; height: 0; transition: opacity .3s var(--ease); }
+.mapa__marca.fuera, .mapa__marca.oculta { opacity: 0; visibility: hidden; }
+.mapa__marca > span { position: absolute; left: 12px; top: 0; transform: translateY(-50%); white-space: nowrap; font-size: .78rem; line-height: 1.2; }
+.mapa__marca.a-la-izq > span { left: auto; right: 12px; }
+.mapa__marca::before { content: ''; position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; transform: rotate(45deg); }
+.mapa__marca--sitio { pointer-events: auto; cursor: pointer; }
+.mapa__marca--sitio::before { left: -4px; top: -4px; width: 8px; height: 8px; background: var(--niebla); border: 1.5px solid var(--monte); }
+.mapa__marca--sitio > span { display: none; }
+.mapa__marca--sitio.es-elegida { z-index: 2; }
+.mapa__marca--sitio.es-elegida::before { left: -6px; top: -6px; width: 12px; height: 12px; background: var(--teja); border-color: var(--niebla); }
+.mapa__marca--sitio.es-elegida > span { display: block; padding: .3em .6em; background: var(--niebla); color: var(--monte); font-weight: 600; box-shadow: 0 2px 10px color-mix(in oklab, var(--monte) 18%, transparent); }
+.mapa__marca--casa { z-index: 3; }
+.mapa__marca--casa::before { left: -7px; top: -7px; width: 14px; height: 14px; background: var(--monte); border: 2px solid var(--niebla); box-shadow: 0 0 0 1px var(--monte); }
+.mapa__marca--casa > span { padding: .3em .6em; background: var(--monte); color: var(--claro); font: 600 .8rem/1.2 var(--letra-titular); letter-spacing: .06em; text-transform: uppercase; }
+.mapa__marca--ciudad::before { left: -2px; top: -2px; width: 4px; height: 4px; background: color-mix(in oklab, var(--monte) 55%, var(--prado)); }
+.mapa__marca--ciudad > span { left: 7px; color: color-mix(in oklab, var(--monte) 70%, var(--prado)); font-size: .74rem; letter-spacing: .04em; }
+.mapa__marca--picos::before { display: none; }
+.mapa__marca--picos > span { left: 0; transform: translate(-50%, -50%); color: color-mix(in oklab, var(--greca) 75%, var(--monte)); font: italic 500 .85rem/1 var(--letra-titular); letter-spacing: .04em; }
+
+.mapa__ficha { padding: 1.1rem 1.2rem 1.15rem; background: var(--niebla); color: var(--monte); box-shadow: 0 10px 34px color-mix(in oklab, var(--monte) 22%, transparent); }
+.mapa__ficha:empty { display: none; }
+.ficha__grupo { margin: 0; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--marca-texto); }
+.ficha__tit { margin: .25rem 0 .6rem; font-size: clamp(1.2rem, 1.05rem + .5vw, 1.5rem); line-height: 1.15; }
+.ficha__datos { display: grid; gap: .3rem; }
+.ficha__datos .esc__coche, .ficha__datos .esc__pie { grid-column: auto; }
+.ficha__por { margin: .65rem 0 0; font-size: .9rem; color: var(--texto-suave); }
+.ficha__ir { display: inline-block; margin-top: .75rem; font-weight: 600; color: var(--monte); text-decoration-color: var(--teja); text-underline-offset: .2em; }
+.mapa__fuente { margin: .6rem 0 0; font-size: .78rem; color: var(--texto-suave); }
+
+@media (min-width: 1000px) {
+  .alrededor__in.con-mapa { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; column-gap: clamp(2rem, 4vw, 4rem); }
+  .con-mapa .mapa { grid-column: 2; grid-row: 1; position: sticky; top: calc(var(--cabecera) + 1.25rem); }
+  .con-mapa .escalera { grid-column: 1; grid-row: 1; grid-template-columns: 1fr; gap: 2rem; }
+  .con-mapa .mapa__lienzo { height: min(calc(100svh - var(--cabecera) - 4.5rem), 780px); }
+  .mapa__ficha { position: absolute; left: 1rem; top: 1rem; z-index: 4; width: min(21rem, calc(100% - 2rem)); }
+}
+@media (max-width: 999px) {
+  .alrededor__in.con-mapa { display: flex; flex-direction: column; gap: 1rem; }
+  .con-mapa .mapa__lienzo { aspect-ratio: 4 / 4.2; max-height: 64svh; width: 100%; }
+  .con-mapa .mapa__ficha { position: relative; box-shadow: 0 0 0 1px var(--linea); }
+  /* el mando, en una tira que se desliza: nombre y tiempo; el detalle va en la ficha */
+  .con-mapa .escalera { display: flex; gap: .5rem; overflow-x: auto; scroll-snap-type: x proximity; margin-inline: calc(-1 * var(--gutter)); padding: .2rem var(--gutter) .6rem; scrollbar-width: thin; }
+  .con-mapa .esc, .con-mapa .esc__lista { display: contents; }
+  .con-mapa .esc__tit, .con-mapa .esc__pie, .con-mapa .esc__km { display: none; }
+  .con-mapa .esc__lista li { flex: none; scroll-snap-align: start; }
+  .con-mapa .esc__btn { white-space: nowrap; border: 1px solid var(--linea); border-left-width: 1px; padding: .55rem .85rem; min-height: 44px; }
+  .con-mapa .esc__btn[aria-pressed="true"] { border-color: var(--teja); }
+  .con-mapa .esc__coche { font-size: .92rem; }
+  .con-mapa .esc__coche .cifra:first-of-type { font-size: 1rem; }
+  /* el «no-JS» del mapa (foto aérea) ya no está; el orden: mapa, ficha, tira */
+  .con-mapa .mapa { order: 0; } .con-mapa .escalera { order: 1; }
+}
+
 /* =====================================================================
    7. RESEÑAS
    ===================================================================== */

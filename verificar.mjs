@@ -119,7 +119,7 @@ const lista = JSON.parse(leer('scripts/fotos-lista.json'));
 
   /* contrato web ↔ módulos */
   const sitios = [...html.replace(/<!--[\s\S]*?-->/g, '').matchAll(/data-modulo="([^"]+)"/g)].map((m) => m[1]);
-  comprobar(JSON.stringify(sitios) === JSON.stringify(['portada', 'lugar']), 'los huecos de los módulos: portada y lugar', sitios);
+  comprobar(JSON.stringify(sitios) === JSON.stringify(['portada', 'lugar', 'alrededor']), 'los huecos de los módulos: portada, lugar y alrededor', sitios);
   comprobar(/<section id="lugar"[^>]*aria-labelledby="t-lugar">[\s\S]*?<div data-modulo="lugar">\s*<figure class="lugar__respaldo">[\s\S]*?jardin-horreo[\s\S]*?<\/figure>\s*<\/div>/.test(html), '#lugar: <div data-modulo="lugar"> con el respaldo (foto del jardín con el hórreo y texto)');
   const cabeza = html.split('</head>')[0];
   comprobar(/<link rel="stylesheet" href="css\/lugar\.css/.test(cabeza) && /<script src="js\/lugar\.js[^"]*" defer><\/script>/.test(html) && html.indexOf('js/lugar.js') < html.indexOf('js/main.js') && html.indexOf('js/portada.js') < html.indexOf('js/main.js'), 'carga css/lugar.css (en el <head>) y js/lugar.js (defer, antes de main.js) aunque aún no existan');
@@ -341,9 +341,10 @@ try {
   const { ctx, page } = await nueva({}, { script: sinCookies });
   await page.goto(PAG);
   await page.click('#tab-hotel');
-  const nombres = await page.evaluate(() => [...document.querySelectorAll('[data-visor]')].filter((b) => b.offsetParent).map((b) => b.dataset.visor));
+  // la foto aérea de «Alrededor» es solo el respaldo del mapa: al montarse el mapa desaparece, así que no entra
+  const nombres = await page.evaluate(() => [...document.querySelectorAll('[data-visor]')].filter((b) => b.offsetParent && !b.closest('[data-modulo="alrededor"]')).map((b) => b.dataset.visor));
   const fj = JSON.parse(leer('img/fotos/fotos.json')).map((f) => f.nombre);
-  comprobar(nombres.length >= 25 && nombres.every((n) => fj.includes(n)), `${nombres.length} fotos con visor y todas existen`, nombres);
+  comprobar(nombres.length >= 24 && nombres.every((n) => fj.includes(n)), `${nombres.length} fotos con visor y todas existen`, nombres);
   const mal = [];
   for (const n of nombres) {
     const b = page.locator(`[data-visor="${n}"]:visible`).first();
@@ -361,6 +362,50 @@ try {
   await page.keyboard.press('Escape');
   comprobar(page._errores.length === 0, 'sin errores', page._errores.slice(0, 3));
   await ctx.close();
+  }
+
+  /* ---------- 5 bis. el mapa de «Alrededor» (js/alrededor.js) ---------- */
+  if (toca(5)) {
+  console.log('\n5 bis. Alrededor: la lista elige el sitio y el mapa dibuja la ruta');
+  for (const [w, h] of [[1280, 800], [390, 844]]) {
+    const movil = w < 600;
+    const { ctx, page } = await nueva({ viewport: { width: w, height: h }, isMobile: movil, hasTouch: movil }, { script: sinCookies });
+    await page.goto(PAG);
+    await page.locator('#alrededor').scrollIntoViewIfNeeded();
+    await page.waitForSelector('.mapa__lienzo[data-listo]', { timeout: 15000 });
+    const ini = await page.evaluate(() => ({
+      botones: document.querySelectorAll('.esc__btn').length, rutas: document.querySelectorAll('.m-ruta').length,
+      pulsado: document.querySelector('.esc__btn[aria-pressed="true"]')?.closest('li').dataset.ruta,
+      ficha: document.querySelector('.mapa__ficha .ficha__tit')?.textContent,
+    }));
+    comprobar(ini.botones === 11 && ini.rutas === 11 && ini.pulsado === 'acantilados' && /acantilados/i.test(ini.ficha || ''), `${w}: 11 sitios con su ruta; arranca en los acantilados con su ficha`, ini);
+    const malos = [];
+    for (const id of ['ribadesella', 'lagos', 'bio', 'guadamia', 'llanes']) {
+      const b = page.locator(`li[data-ruta="${id}"] .esc__btn`);
+      await b.scrollIntoViewIfNeeded();
+      if (movil) await b.tap(); else await b.click();
+      const r = await page.evaluate(() => {
+        const lz = document.querySelector('.mapa__lienzo').getBoundingClientRect();
+        const ficha = document.querySelector('.mapa__ficha'), fr = ficha.getBoundingClientRect();
+        const fichaEncima = getComputedStyle(ficha).position === 'absolute';
+        const punto = (el) => { const r = el.getBoundingClientRect(); return { x: r.left, y: r.top }; };
+        const ve = (el) => { const p = punto(el); return !el.classList.contains('fuera') && p.x >= lz.left && p.x <= lz.right && p.y >= lz.top && p.y <= lz.bottom; };
+        const tapa = (el) => { const p = punto(el); return fichaEncima && p.x >= fr.left - 8 && p.x <= fr.right + 8 && p.y >= fr.top - 8 && p.y <= fr.bottom + 8; };
+        const casa = document.querySelector('.mapa__marca--casa'), dest = document.querySelector('.mapa__marca--sitio.es-elegida');
+        return {
+          pulsado: document.querySelector('.esc__btn[aria-pressed="true"]').closest('li').dataset.ruta, sel: dest && dest.dataset.ruta,
+          linea: !!document.querySelector('.m-sel').getAttribute('d'), casa: ve(casa), destino: !!dest && ve(dest),
+          tapada: tapa(casa) || (!!dest && tapa(dest)), enlace: document.querySelector('.ficha__ir').href, ficha: document.querySelector('.ficha__tit').textContent,
+        };
+      });
+      if (r.pulsado !== id || r.sel !== id || !r.linea || !r.casa || !r.destino || r.tapada || !/google\.com\/maps\/dir\/.*origin=43\.44/.test(r.enlace)) malos.push([id, r]);
+    }
+    comprobar(malos.length === 0, `${w}: cada sitio se marca, el mapa encuadra casa y destino sin que la ficha los tape, y la ficha enlaza a la ruta en Google Maps`, malos.slice(0, 2));
+    const nivel = await page.evaluate(() => [...document.querySelectorAll('.m-nivel')].filter((g) => g.style.display !== 'none').map((g) => g.dataset.nivel));
+    comprobar(nivel.length === 1, `${w}: se ve un solo nivel de detalle de la costa (${nivel.join(',')})`, nivel);
+    comprobar(page._errores.length === 0, `${w}: sin errores`, page._errores.slice(0, 3));
+    await ctx.close();
+  }
   }
 
   /* ---------- 6. reservar: el buscador y el iframe REAL que se crea solo al pedirlo ---------- */

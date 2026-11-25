@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@75..125,300..700&family=Gantari:ital,wght@0,400..700;1,400&family=Sono:wght@400..600&display=swap">
 <link rel="stylesheet" href="css/base.css?v=797480bd">
-<link rel="stylesheet" href="css/estilos.css?v=292cca26">
+<link rel="stylesheet" href="css/estilos.css?v=085e1046">
 <link rel="stylesheet" href="css/lugar.css?v=cdfe62fc">
 <link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="marca/favicon-32.png" sizes="32x32" type="image/png">
@@ -356,38 +356,40 @@
       <h2 id="t-alrededor" class="sec-tit" data-aparece>Alrededor</h2>
       <p class="sec-txt">La playa de Guadamía y los bufones de Pría, a un paseo. Ribadesella y Llanes, a un rato. Los Picos de Europa, detrás.</p>
     </header>
-    <div class="alrededor__in">
-      <figure class="alrededor__f"><button type="button" class="foto-btn" data-visor="aereo" data-grupo="alrededor" aria-label="Ver más grande: vista aérea de prados y bosque con el mar al fondo"><picture data-foto="aereo"><source type="image/avif" srcset="img/fotos/aereo-480.avif 480w, img/fotos/aereo-800.avif 800w, img/fotos/aereo-1200.avif 1200w, img/fotos/aereo-1600.avif 1600w, img/fotos/aereo-1920.avif 1920w, img/fotos/aereo-2048.avif 2048w" sizes="(max-width: 899px) 92vw, 40vw"><source type="image/webp" srcset="img/fotos/aereo-480.webp 480w, img/fotos/aereo-800.webp 800w, img/fotos/aereo-1200.webp 1200w, img/fotos/aereo-1600.webp 1600w, img/fotos/aereo-1920.webp 1920w, img/fotos/aereo-2048.webp 2048w" sizes="(max-width: 899px) 92vw, 40vw"><img src="img/fotos/aereo-800.jpg" srcset="img/fotos/aereo-480.jpg 480w, img/fotos/aereo-800.jpg 800w, img/fotos/aereo-1200.jpg 1200w, img/fotos/aereo-1600.jpg 1600w, img/fotos/aereo-1920.jpg 1920w, img/fotos/aereo-2048.jpg 2048w" sizes="(max-width: 899px) 92vw, 40vw" width="2048" height="1152" alt="Vista aérea de prados, bosques y casas con el mar al fondo" loading="lazy" decoding="async"></picture></button></figure>
+    <div class="alrededor__in" data-modulo="alrededor">
+      <div class="mapa">
+        <figure class="alrededor__f"><button type="button" class="foto-btn" data-visor="aereo" data-grupo="alrededor" aria-label="Ver más grande: vista aérea de prados y bosque con el mar al fondo"><picture data-foto="aereo"><source type="image/avif" srcset="img/fotos/aereo-480.avif 480w, img/fotos/aereo-800.avif 800w, img/fotos/aereo-1200.avif 1200w, img/fotos/aereo-1600.avif 1600w, img/fotos/aereo-1920.avif 1920w, img/fotos/aereo-2048.avif 2048w" sizes="(max-width: 999px) 92vw, 58vw"><source type="image/webp" srcset="img/fotos/aereo-480.webp 480w, img/fotos/aereo-800.webp 800w, img/fotos/aereo-1200.webp 1200w, img/fotos/aereo-1600.webp 1600w, img/fotos/aereo-1920.webp 1920w, img/fotos/aereo-2048.webp 2048w" sizes="(max-width: 999px) 92vw, 58vw"><img src="img/fotos/aereo-800.jpg" srcset="img/fotos/aereo-480.jpg 480w, img/fotos/aereo-800.jpg 800w, img/fotos/aereo-1200.jpg 1200w, img/fotos/aereo-1600.jpg 1600w, img/fotos/aereo-1920.jpg 1920w, img/fotos/aereo-2048.jpg 2048w" sizes="(max-width: 999px) 92vw, 58vw" width="2048" height="1152" alt="Vista aérea de prados, bosques y casas con el mar al fondo" loading="lazy" decoding="async"></picture></button></figure>
+      </div>
       <div class="escalera">
       <section class="esc esc--1" aria-labelledby="t-esc-costa">
         <h3 class="esc__tit" id="t-esc-costa">La costa<small>Acantilados, playa y bufones</small></h3>
         <ol class="esc__lista">
-          <li data-ruta="acantilados"><b>Los acantilados (El Infierno)</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">15 min</span><span class="cifra esc__km">4,4 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">37 min</span><span class="cifra esc__km">2,8 km</span></span></li>
-          <li data-ruta="guadamia"><b>Playa de Guadamía</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">10 min</span><span class="cifra esc__km">4,5 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">59 min</span><span class="cifra esc__km">4,4 km</span></span></li>
-          <li data-ruta="bufones"><b>Bufones de Pría</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">11 min</span><span class="cifra esc__km">4,8 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">1 h 07 min</span><span class="cifra esc__km">5 km</span></span></li>
+          <li data-ruta="acantilados" data-lat="43.4601" data-lon="-5.01823" data-carreteras="AS-379"><b>Los acantilados (El Infierno)</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">15 min</span><span class="cifra esc__km">4,4 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">37 min</span><span class="cifra esc__km">2,8 km</span></span></li>
+          <li data-ruta="guadamia" data-lat="43.45588" data-lon="-4.98229" data-carreteras="AS-379"><b>Playa de Guadamía</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">10 min</span><span class="cifra esc__km">4,5 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">59 min</span><span class="cifra esc__km">4,4 km</span></span></li>
+          <li data-ruta="bufones" data-lat="43.45871" data-lon="-4.97986" data-carreteras="AS-379"><b>Bufones de Pría</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">11 min</span><span class="cifra esc__km">4,8 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">1 h 07 min</span><span class="cifra esc__km">5 km</span></span></li>
         </ol>
       </section>
       <section class="esc esc--2" aria-labelledby="t-esc-pueblos">
         <h3 class="esc__tit" id="t-esc-pueblos">Los pueblos<small>Ribadesella y Llanes</small></h3>
         <ol class="esc__lista">
-          <li data-ruta="ribadesella"><b>Ribadesella</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">10 min</span><span class="cifra esc__km">7,6 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">1 h 06 min</span><span class="cifra esc__km">4,9 km</span></span></li>
-          <li data-ruta="llanes"><b>Llanes</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">24 min</span><span class="cifra esc__km">25,8 km</span></span></li>
+          <li data-ruta="ribadesella" data-lat="43.4618" data-lon="-5.05886" data-carreteras="A-8 · N-634 · N-632"><b>Ribadesella</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">10 min</span><span class="cifra esc__km">7,6 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">1 h 06 min</span><span class="cifra esc__km">4,9 km</span></span></li>
+          <li data-ruta="llanes" data-lat="43.42112" data-lon="-4.75308" data-carreteras="A-8 · AS-379"><b>Llanes</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">24 min</span><span class="cifra esc__km">25,8 km</span></span></li>
         </ol>
       </section>
       <section class="esc esc--3" aria-labelledby="t-esc-picos">
         <h3 class="esc__tit" id="t-esc-picos">Los Picos de Europa<small>Por Cangas de Onís</small></h3>
         <ol class="esc__lista">
-          <li data-ruta="cangas"><b>Cangas de Onís</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">26 min</span><span class="cifra esc__km">26,7 km</span></span></li>
-          <li data-ruta="covadonga"><b>Covadonga</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">37 min</span><span class="cifra esc__km">36,9 km</span></span></li>
-          <li data-ruta="lagos"><b>Lagos de Covadonga</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">55 min</span><span class="cifra esc__km">48,3 km</span></span></li>
+          <li data-ruta="cangas" data-lat="43.3512573" data-lon="-5.1285448" data-carreteras="A-8 · N-634 · N-625"><b>Cangas de Onís</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">26 min</span><span class="cifra esc__km">26,7 km</span></span></li>
+          <li data-ruta="covadonga" data-lat="43.30847" data-lon="-5.05468" data-carreteras="A-8 · N-634 · N-625 · AS-114 · AS-262"><b>Covadonga</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">37 min</span><span class="cifra esc__km">36,9 km</span></span></li>
+          <li data-ruta="lagos" data-lat="43.26992" data-lon="-4.98615" data-carreteras="A-8 · N-634 · N-625 · AS-114 · AS-262 · CO-4"><b>Lagos de Covadonga</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">55 min</span><span class="cifra esc__km">48,3 km</span></span></li>
         </ol>
       </section>
       <section class="esc esc--4" aria-labelledby="t-esc-aeropuertos">
         <h3 class="esc__tit" id="t-esc-aeropuertos">Aeropuertos<small>Para llegar</small></h3>
         <ol class="esc__lista">
-          <li data-ruta="ovd"><b>Aeropuerto de Asturias</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">1 h 15 min</span><span class="cifra esc__km">104,3 km</span></span></li>
-          <li data-ruta="sdr"><b>Aeropuerto de Santander</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">1 h 20 min</span><span class="cifra esc__km">111,2 km</span></span></li>
-          <li data-ruta="bio"><b>Aeropuerto de Bilbao</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">2 h 24 min</span><span class="cifra esc__km">202,8 km</span></span></li>
+          <li data-ruta="ovd" data-lat="43.5616" data-lon="-6.03307" data-carreteras="A-8 · AI-82"><b>Aeropuerto de Asturias</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">1 h 15 min</span><span class="cifra esc__km">104,3 km</span></span></li>
+          <li data-ruta="sdr" data-lat="43.42694" data-lon="-3.8205" data-carreteras="A-8 · A-67 · N-636"><b>Aeropuerto de Santander</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">1 h 20 min</span><span class="cifra esc__km">111,2 km</span></span></li>
+          <li data-ruta="bio" data-lat="43.30173" data-lon="-2.9151" data-carreteras="A-8 · BI-30 · BI-735 · BI-3738"><b>Aeropuerto de Bilbao</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">2 h 24 min</span><span class="cifra esc__km">202,8 km</span></span></li>
         </ol>
       </section>
       </div>
@@ -569,6 +571,7 @@
 <!-- los módulos: la portada (Web) y el 3D (Lugar 3D). Si falta el de Lugar, la página no falla: se queda el respaldo -->
 <script src="js/portada.js?v=196ea10f" defer></script>
 <script src="js/lugar.js?v=6e52316d" defer></script>
+<script src="js/alrededor.js?v=c20af0eb" defer></script>
 <!-- la web -->
 <script src="js/reserva.js?v=55ea90f9" defer></script>
 <script src="js/main.js?v=1b8e930d" defer></script>

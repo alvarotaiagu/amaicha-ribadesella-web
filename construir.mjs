@@ -185,13 +185,17 @@ function alrededor() {
     return `      <section class="esc esc--${i + 1}" aria-labelledby="t-esc-${g}">
         <h3 class="esc__tit" id="t-esc-${g}">${tit}<small>${sub}</small></h3>
         <ol class="esc__lista">
-${ids.map((id) => { const d = R.destinos[id]; const c = d.desde_casa; const p = d.a_pie; return `          <li data-ruta="${id}"><b>${esc(d.nombre)}</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">${tiempo(c.minutos)}</span><span class="cifra esc__km">${km(c.km)}</span></span>${p ? `<span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">${tiempo(p.minutos)}</span><span class="cifra esc__km">${km(p.km)}</span></span>` : ''}</li>`; }).join('\n')}
+${ids.map((id) => { const d = R.destinos[id]; const c = d.desde_casa; const p = d.a_pie; return `          <li data-ruta="${id}" data-lat="${d.lat}" data-lon="${d.lon}" data-carreteras="${esc((c.carreteras || []).join(' · '))}"><b>${esc(d.nombre)}</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">${tiempo(c.minutos)}</span><span class="cifra esc__km">${km(c.km)}</span></span>${p ? `<span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">${tiempo(p.minutos)}</span><span class="cifra esc__km">${km(p.km)}</span></span>` : ''}</li>`; }).join('\n')}
         </ol>
       </section>`;
   }).join('\n');
   const rib = R.destinos.ribadesella;
-  return `    <div class="alrededor__in">
-      <figure class="alrededor__f"><button type="button" class="foto-btn" data-visor="aereo" data-grupo="alrededor" aria-label="Ver más grande: vista aérea de prados y bosque con el mar al fondo"><img data-foto="aereo" alt="Vista aérea de prados, bosques y casas con el mar al fondo" sizes="(max-width: 899px) 92vw, 40vw"></button></figure>
+  // data-modulo="alrededor": js/alrededor.js cambia la foto por el mapa y hace de la lista el mando (al pulsar un sitio,
+  // su ruta se dibuja desde la casa). Sin JS se queda esto: la foto aérea y la lista con las cifras.
+  return `    <div class="alrededor__in" data-modulo="alrededor">
+      <div class="mapa">
+        <figure class="alrededor__f"><button type="button" class="foto-btn" data-visor="aereo" data-grupo="alrededor" aria-label="Ver más grande: vista aérea de prados y bosque con el mar al fondo"><img data-foto="aereo" alt="Vista aérea de prados, bosques y casas con el mar al fondo" sizes="(max-width: 999px) 92vw, 58vw"></button></figure>
+      </div>
       <div class="escalera">
 ${cols}
       </div>
