@@ -1,0 +1,101 @@
+/* =====================================================================
+   Amaicha · «La greca» · base: tokens, letras, reinicio y piezas comunes.
+   VARIABLES COMUNES DEL CONTRATO (las define la Web; Lugar 3D solo las LEE):
+     --fondo, --superficie, --texto, --texto-suave, --marca, --acento, --linea,
+     --letra-titular, --letra-texto, --letra-cifras.
+   Paleta (cinco colores, ninguno más; el resto son mezclas):
+     niebla  #EDEFEA  fondo frío, verdoso (no crema)
+     monte   #17211C  casi negro verde: texto y campos oscuros (portada, el lugar, el pie)
+     prado   #DFE4DC  superficie: paneles y el buscador
+     greca   #836759  el taupe EXACTO de la greca del logo (mediana de sus píxeles opacos)
+     teja    #9C3324  acento: el rojo de la casa roja y de la teja; solo botones de reservar y marcas activas
+   ===================================================================== */
+:root {
+  --niebla: #EDEFEA;
+  --monte: #17211C;
+  --prado: #DFE4DC;
+  --greca: #836759;
+  --teja: #9C3324;
+
+  /* contrato */
+  --fondo: var(--niebla);
+  --superficie: var(--prado);
+  --texto: var(--monte);
+  --texto-suave: color-mix(in oklab, var(--monte) 78%, var(--niebla));
+  --marca: var(--greca);
+  --acento: var(--teja);
+  --linea: color-mix(in oklab, var(--monte) 20%, var(--niebla));
+  --letra-titular: 'Encode Sans', 'Arial Narrow', system-ui, sans-serif;
+  --letra-texto: 'Gantari', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --letra-cifras: 'Sono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  /* derivados (texto que tiene que llegar a AA) */
+  --marca-texto: color-mix(in oklab, var(--greca) 70%, var(--monte));   /* la greca como texto pequeño sobre niebla */
+  --claro: var(--niebla);
+  --claro-suave: color-mix(in oklab, var(--niebla) 78%, var(--monte));  /* texto secundario sobre monte */
+  --marca-clara: color-mix(in oklab, var(--greca) 52%, var(--niebla));  /* la greca como texto sobre monte */
+  --linea-clara: color-mix(in oklab, var(--niebla) 22%, var(--monte));
+  --foco: var(--teja);
+
+  --cabecera: 68px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --ancho: 1240px;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --radio: 0;   /* todo en arista viva, como la greca */
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; scroll-padding-top: calc(var(--cabecera) + 12px); }
+body { margin: 0; background: var(--fondo); color: var(--texto); font: 400 1.0625rem/1.6 var(--letra-texto); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+img, svg, video { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+button { font: inherit; color: inherit; }
+h1, h2, h3, h4 { margin: 0; font-family: var(--letra-titular); font-weight: 500; font-stretch: 112%; line-height: 1.05; letter-spacing: -.015em; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+figure { margin: 0; }
+address { font-style: normal; }
+[hidden] { display: none !important; }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.cifra { font-family: var(--letra-cifras); font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+.ico { width: 24px; height: 24px; flex: none; }
+
+/* foco del teclado: contorno de 2 px y, por fuera, las cuatro esquinas en escalón (#foco-greca, main.js) */
+:focus-visible { outline: 2px solid var(--foco); outline-offset: 4px; }
+:focus:not(:focus-visible) { outline: none; }
+.foco-greca { position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: none; z-index: 120; overflow: visible; opacity: 0; color: var(--foco); }
+.foco-greca.es-fijo { position: fixed; }
+.foco-greca.es-visible { opacity: 1; }
+.foco-greca path { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; }
+
+.saltar { position: fixed; left: 12px; top: -80px; z-index: 200; background: var(--monte); color: var(--claro); padding: .7rem 1rem; text-decoration: none; }
+.saltar:focus { top: 12px; }
+
+.env { width: min(100% - 2 * var(--gutter), var(--ancho)); margin-inline: auto; }
+
+/* ---------- botones (arista viva, una sola etiqueta por intención: «Ver fechas») ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 48px; padding: .7rem 1.35rem; border: 2px solid transparent; border-radius: var(--radio);
+  font: 600 .98rem/1.1 var(--letra-titular); font-stretch: 108%; letter-spacing: .005em; text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .15s var(--ease); }
+.btn:active { transform: translateY(1px); }
+.btn--acento { background: var(--teja); color: var(--claro); --foco: var(--monte); }
+.btn--acento:hover { background: color-mix(in oklab, var(--teja) 82%, var(--monte)); }
+.btn--oscuro { background: var(--monte); color: var(--claro); }
+.btn--oscuro:hover { background: color-mix(in oklab, var(--monte) 82%, var(--greca)); }
+.btn--linea { border-color: var(--monte); color: var(--monte); background: transparent; }
+.btn--linea:hover { background: var(--monte); color: var(--claro); }
+.btn--linea-clara { border-color: color-mix(in oklab, var(--niebla) 70%, transparent); color: var(--claro); background: transparent; }
+.btn--linea-clara:hover { background: var(--claro); color: var(--monte); }
+.enlace { background: none; border: 0; padding: .4rem 0; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; color: inherit; }
+
+/* ---------- titulares que aparecen (solo con movimiento: «con-movimiento» lo pone main.js) ---------- */
+.con-movimiento [data-aparece] { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.con-movimiento [data-aparece].es-visto { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}

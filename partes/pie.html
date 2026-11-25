@@ -1,0 +1,48 @@
+<!-- ============ pie (monte): el logo entero. La greca se CIERRA al llegar (lo que la portada abrió, el pie lo cierra):
+     anillo de fuera y ganchos, anillo medio, cuadrado y punto, de fuera adentro. Con movimiento reducido, ya cerrada ============ -->
+<footer class="pie" id="pie">
+  <div class="env">
+    <div class="pie__arriba">
+      <a class="pie__logo" href="./" aria-label="Amaicha, a la portada">
+<!--greca-pie-->
+        <span class="pie__palabra" aria-hidden="true"></span>
+      </a>
+      <div class="pie__cols">
+        <div>
+          <h2 class="pie__h">Dónde</h2>
+          <p>Camango 44<br>33568 Ribadesella (Asturias)</p>
+          <p><a href="#contacto">Cómo llegar</a></p>
+        </div>
+        <div>
+          <h2 class="pie__h">Reservas</h2>
+          <p><a class="cifra" href="tel:+34661598965">661 59 89 65</a><br><a href="mailto:cris@amaicha.es">cris@amaicha.es</a></p>
+          <p><a href="#reservar">Su motor de reservas</a></p>
+        </div>
+        <div>
+          <h2 class="pie__h">La casa</h2>
+          <p><a href="#quedarse">Tres formas de quedarse</a><br><a href="#casa">Por estancias</a><br><a href="#lugar">El lugar</a><br><a href="#alrededor">Alrededor</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="pie__legal">
+      <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="accesibilidad.html">Accesibilidad</a><button type="button" id="abrir-cookies">Preferencias de cookies</button></nav>
+      <p>© <span id="anno">2026</span> Amaicha · Camango, Ribadesella (Asturias)</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Sin cookies de análisis ni de publicidad: solo se guarda que has visto este aviso. Las letras vienen de Google Fonts; el mapa de Google y el motor de reservas (Amenitiz, con sus cookies) solo se cargan si los pides. <a href="cookies.html">Más información</a></p>
+  <div class="cookies__acc">
+    <button class="btn btn--oscuro" type="button" id="ck-si">Entendido</button>
+    <button class="btn btn--linea" type="button" id="ck-no">Solo lo necesario</button>
+  </div>
+</div>
+
+<!-- MANDO DE MAQUETA (no viaja al cliente): solo con ?revision -->
+<div class="mando" id="mando" role="group" aria-label="Dos versiones de la misma web" hidden>
+  <span class="mando__eti">Versión</span>
+  <button type="button" data-densidad="greca" aria-pressed="true">Greca</button>
+  <button type="button" data-densidad="sobria" aria-pressed="false">Sobria</button>
+</div>
+<!-- fin del MANDO DE MAQUETA -->

@@ -1,0 +1,390 @@
+[
+ {
+  "nombre": "horreo",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 1067,
+  "origen": "origen/IMG_20220926_091902_041-scaled-1.jpg",
+  "foco": [
+   0.55,
+   0.42
+  ]
+ },
+ {
+  "nombre": "hab-matrimonio",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 1200,
+  "origen": "origen/amaicha-complejo-de-turismo-rural-galeria05.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "hab-morada",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 1250,
+  "origen": "origen/amaicha-complejo-turistico-en-ribadesella-inicio-hotel01-scaled.jpeg",
+  "foco": null
+ },
+ {
+  "nombre": "hab-dos-camas",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1554
+  ],
+  "ancho": 1554,
+  "alto": 874,
+  "origen": "origen/amaicha-complejo-turistico-en-ribadesella-inicio-hotel02.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "hab-azul",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1800
+  ],
+  "ancho": 1800,
+  "alto": 1350,
+  "origen": "amenitiz/al6atyip91gefnv2thff.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "hab-flores",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1296,
+  "origen": "amenitiz/bzl4hp8skpjocrgcwykf.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "hab-bano",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1536,
+  "origen": "amenitiz/jvpwozc29gxkl7ydxzmj.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "comun-salon",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1153,
+  "origen": "amenitiz/bhf4tm80s9qgnhtvswis.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "comun-comedor",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 901,
+  "origen": "origen/amaicha-complejo-turistico-en-ribadesella-inicio-grupos03-scaled.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "comun-chimenea",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 900,
+  "origen": "origen/amaicha-complejo-turistico-en-ribadesella-inicio-grupos02.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "comun-escalera",
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "ancho": 1000,
+  "alto": 563,
+  "origen": "origen/amaicha-complejo-de-turismo-rural-galeria03.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "comun-ventanales",
+  "anchos": [
+   480,
+   800
+  ],
+  "ancho": 800,
+  "alto": 450,
+  "origen": "origen/slider-amaicha-hotel-grupos.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "comun-cocina",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1254,
+  "origen": "amenitiz/n6p5cplcgbqzlyepehce.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "apto-salon",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1536,
+  "origen": "amenitiz/q8s0mp5utey1kpebblhl.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "apto-comedor",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1579,
+  "origen": "amenitiz/ydkwpgfaylzw6bpaxuth.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "apto-cocina",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1558,
+  "origen": "amenitiz/so5lkyaybtbxyuyq3x8a.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "apto-dos-camas",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 1200,
+  "origen": "origen/amaicha-complejo-turistico-en-ribadesella-inicio-apartamentos03-scaled.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "apto-matrimonio",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 1271,
+  "origen": "origen/amaicha-complejo-turistico-en-ribadesella-inicio-apartamentos02-scaled.jpeg",
+  "foco": null
+ },
+ {
+  "nombre": "casona",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1800
+  ],
+  "ancho": 1800,
+  "alto": 1200,
+  "origen": "amenitiz/uwxcj4lhspz8btkdpau1.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "jardin-casona",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1365,
+  "origen": "amenitiz/jtjeoqgkwwoktcf05chw.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "casa-roja",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1365,
+  "origen": "amenitiz/fhv0clvnnyyuv4j1bsyg.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "casa-roja-porche",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1536,
+  "origen": "amenitiz/mppf2aq2xczuutbns9jr.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "porche",
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "ancho": 1000,
+  "alto": 667,
+  "origen": "origen/slider-hotel-amaicha.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "horreo-jardin",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1400
+  ],
+  "ancho": 1400,
+  "alto": 934,
+  "origen": "amenitiz/z4pmxf6m5pbrjdp0j1a6.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "vista-corredor",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 2730,
+  "origen": "amenitiz/yuibqgag0rsdm6mykc9o.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "jardin-horreo",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ancho": 1600,
+  "alto": 1067,
+  "origen": "amenitiz/z1f1bqofhwzslzxm2tyw.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "desayuno",
+  "anchos": [
+   480,
+   800,
+   1000
+  ],
+  "ancho": 1000,
+  "alto": 988,
+  "origen": "origen/amaicha-complejo-turistico-en-ribadesella-inicio-hotel03-scaled.jpg",
+  "foco": null
+ },
+ {
+  "nombre": "aereo",
+  "anchos": [
+   480,
+   800,
+   1200,
+   1600,
+   1920,
+   2048
+  ],
+  "ancho": 2048,
+  "alto": 1152,
+  "origen": "amenitiz/l6qubmqvbmmn1qzacomn.jpg",
+  "foco": null
+ }
+]

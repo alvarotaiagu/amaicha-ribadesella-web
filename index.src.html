@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amaicha · Hotel y apartamentos rurales en Camango, Ribadesella</title>
+<meta name="description" content="Casona de piedra con hórreo y jardín en Camango (Ribadesella, Asturias): siete habitaciones dobles y una individual, dos apartamentos con terraza o la casa entera para grupos.">
+<meta property="og:title" content="Amaicha · Hotel y apartamentos rurales en Ribadesella">
+<meta property="og:description" content="Casona de piedra con hórreo y jardín en Camango, entre Ribadesella y Llanes.">
+<!--precarga-portada-->
+<!--parte:partes/cabeza.html-->
+</head>
+<body>
+<!--parte:partes/cabecera.html-->
+<!--parte:partes/iconos.html-->
+
+<main id="principal">
+
+<!-- ============ 1. PORTADA «La greca» (js/portada.js, Amaicha.portada): la greca del logo es la ventana a la foto del
+     hórreo y se abre escalón a escalón con el scroll hasta llenar la pantalla. El HTML de [data-modulo="portada"] es el
+     respaldo (sin JS, con movimiento reducido y en la versión sobria): la ventana ya abierta hasta el anillo de fuera,
+     con el anillo y los ganchos en marrón. La foto es el LCP (se precarga). ============ -->
+<section id="portada" class="portada" aria-labelledby="t-portada">
+  <div class="portada__fija">
+    <div class="portada__greca" data-modulo="portada">
+      <div class="portada__ventana"><img data-foto="horreo" alt="El hórreo de Amaicha en el jardín, sobre sus pegoyos, con mesas de picnic y sombrillas" sizes="100vw" fetchpriority="high" loading="eager"></div>
+<!--greca-portada-->
+    </div>
+    <div class="portada__texto">
+      <h1 id="t-portada" class="portada__tit">Hotel y apartamentos rurales entre Ribadesella y&nbsp;Llanes</h1>
+      <p class="portada__sub">Una casona de piedra con su hórreo y su jardín en Camango. Por habitaciones, en apartamento o la casa entera.</p>
+      <p class="portada__acc"><a class="btn btn--acento" href="#reservar">Ver fechas</a><a class="btn btn--linea-clara cifra" href="tel:+34661598965"><span class="vh">Llamar al </span>661 59 89 65</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. Tres formas de quedarse: fichas con cifras grandes, servicios con icono propio y condiciones aparte.
+     Sin JS se ven las tres seguidas; con JS, un selector (pestañas). Datos: data/amaicha.json → construir.mjs ============ -->
+<section id="quedarse" class="sec quedarse" aria-labelledby="t-quedarse">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-quedarse" class="sec-tit" data-aparece>Tres formas de quedarse</h2>
+      <p class="sec-txt">Una habitación de la casona, un apartamento para la familia o toda la casa para el grupo. Las tres, con el mismo jardín.</p>
+    </header>
+<!--formas-->
+<!--vistazo-->
+  </div>
+</section>
+
+<!-- ============ 3. Desayuno casero ============ -->
+<section id="desayuno" class="sec desayuno" aria-labelledby="t-desayuno">
+  <div class="env desayuno__in">
+    <figure class="desayuno__f">
+      <button type="button" class="foto-btn" data-visor="desayuno" data-grupo="desayuno" aria-label="Ver más grande: el desayuno casero"><img data-foto="desayuno" alt="Mesa del desayuno con bizcocho en rodajas, zumo de naranja, mermeladas y tazas" sizes="(max-width: 799px) 92vw, 40vw"></button>
+    </figure>
+    <div class="desayuno__txt">
+      <h2 id="t-desayuno" class="sec-tit" data-aparece>Desayuno casero</h2>
+<!--desayuno-lista-->
+      <p class="desayuno__nota">Si tienes alguna intolerancia o alergia, avísalo con antelación y lo adaptan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. La casa por estancias: índice fijo que marca la estancia que se ve, fotos sin marco con las alturas
+     igualadas por fila y el visor que abre por NOMBRE de archivo (checklist 11) ============ -->
+<section id="casa" class="sec casa" aria-labelledby="t-casa">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-casa" class="sec-tit" data-aparece>La casa, por estancias</h2>
+      <p class="sec-txt">Pulsa cualquier foto para verla grande.</p>
+    </header>
+<!--estancias-->
+  </div>
+</section>
+
+<!-- ============ 5. EL LUGAR EN 3D (módulo del agente Lugar 3D: js/lugar.js, css/lugar.css). El HTML de
+     [data-modulo="lugar"] es el respaldo que pone la Web: la foto del jardín con el hórreo y un texto breve. Lugar 3D
+     puede sustituirlo por un plan B 2D mejor dentro de su div. main.js monta Amaicha.lugar al acercarse (900 px). ============ -->
+<section id="lugar" class="sec lugar" aria-labelledby="t-lugar">
+  <div class="env lugar__cab">
+    <h2 id="t-lugar" class="sec-tit" data-aparece>Del acantilado al hórreo</h2>
+    <p class="sec-txt">Camango queda entre el Cantábrico y los Picos de Europa. La casa está en un prado con frutales, a menos de dos kilómetros en línea recta de los acantilados.</p>
+  </div>
+  <div data-modulo="lugar">
+    <figure class="lugar__respaldo">
+      <img data-foto="jardin-horreo" alt="El jardín de Amaicha con el hórreo, las mesas de madera y las casas de piedra y teja" sizes="100vw">
+      <figcaption>El jardín, con el hórreo y las casas.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 6. Alrededor: distancias SOLO de OSRM (ref/raw/rutas.json → construir.mjs). Sin el fichero, sin cifras ============ -->
+<section id="alrededor" class="sec alrededor" aria-labelledby="t-alrededor">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-alrededor" class="sec-tit" data-aparece>Alrededor</h2>
+      <p class="sec-txt">La playa de Guadamía y los bufones de Pría, a un paseo. Ribadesella y Llanes, a un rato. Los Picos de Europa, detrás.</p>
+    </header>
+<!--alrededor-->
+  </div>
+</section>
+
+<!-- ============ 7. Reseñas (Google: 9,6 con 198 reseñas; hay recuento suficiente para decirlo) ============ -->
+<section id="resenas" class="sec resenas" aria-labelledby="t-resenas">
+  <div class="env">
+<!--resenas-->
+  </div>
+</section>
+
+<!-- ============ 8. Reservar: buscador propio (js/reserva.js) que abre su motor REAL (Amenitiz) en un iframe solo al
+     pedirlo; dentro lleva Google Tag Manager. Amenitiz acepta por URL start_date, end_date, adults y children ============ -->
+<section id="reservar" class="sec reservar" aria-labelledby="t-reservar">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-reservar" class="sec-tit" data-aparece>Ver fechas y reservar</h2>
+      <p class="sec-txt">Elige llegada, salida y cuántos sois. Se abre su motor de reservas con tu búsqueda hecha.</p>
+    </header>
+<!--parte:partes/reserva.html-->
+  </div>
+</section>
+
+<!-- ============ 9. Contacto y mapa (Google Maps sin clave, solo tras pulsar) ============ -->
+<section id="contacto" class="sec contacto" aria-labelledby="t-contacto">
+  <div class="env contacto__in">
+    <div class="contacto__txt">
+      <h2 id="t-contacto" class="sec-tit" data-aparece>Cómo llegar</h2>
+      <address class="contacto__dir">Camango 44<br>33568 Ribadesella (Asturias)<br><span class="contacto__fino">Parroquia de Collera</span></address>
+      <p class="contacto__lineas"><a class="cifra" href="tel:+34661598965">661 59 89 65</a><a href="mailto:cris@amaicha.es">cris@amaicha.es</a><a href="https://www.facebook.com/amaicha.es/" target="_blank" rel="noopener">Facebook<span class="vh"> (se abre en otra pestaña)</span></a></p>
+<!--llegar-->
+    </div>
+    <div class="mapa" id="mapa">
+      <button type="button" class="map-consent" id="mapa-btn">
+        <span class="map-consent__greca" aria-hidden="true"></span>
+        <b>Ver el mapa</b>
+        <span>Al pulsar se carga Google Maps, que puede instalar sus cookies.</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!--parte:partes/pie.html-->
+
+<!-- visor de fotos (se abre por el NOMBRE de la foto) -->
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <figure class="visor__fig">
+    <img id="visor-img" alt="" width="1600" height="1067">
+    <figcaption><span id="visor-pie"></span> <span class="visor__n cifra" id="visor-n"></span></figcaption>
+  </figure>
+  <button type="button" class="visor__btn visor__btn--ant" id="visor-ant" aria-label="Foto anterior"><svg class="ico" aria-hidden="true"><use href="#i-flecha-izq"/></svg></button>
+  <button type="button" class="visor__btn visor__btn--sig" id="visor-sig" aria-label="Foto siguiente"><svg class="ico" aria-hidden="true"><use href="#i-flecha-der"/></svg></button>
+  <button type="button" class="visor__cerrar" id="visor-cerrar" aria-label="Cerrar"><svg class="ico" aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+</dialog>
+
+<!-- el foco del teclado: un marco con las esquinas en escalón, como la greca (lo coloca main.js) -->
+<svg class="foco-greca" id="foco-greca" aria-hidden="true" focusable="false"><path/></svg>
+
+<!--parte:partes/guiones.html-->
+</body>
+</html>

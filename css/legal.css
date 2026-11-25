@@ -1,0 +1,34 @@
+/* Amaicha · páginas legales y 404 (con los tokens de css/base.css) */
+.legal-cab { background: var(--monte); color: var(--claro); --foco: var(--claro); }
+.legal-cab .env { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 72px; }
+.legal-marca { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; }
+.legal-marca__greca { width: 40px; height: 29px; background: var(--marca-clara); -webkit-mask: url(../marca/greca.svg) center / contain no-repeat; mask: url(../marca/greca.svg) center / contain no-repeat; }
+.legal-marca__palabra { width: 104px; height: 26px; background: var(--claro); -webkit-mask: url(../marca/palabra.svg) center / contain no-repeat; mask: url(../marca/palabra.svg) center / contain no-repeat; }
+.volver { padding: .7rem 0; }
+.legal { padding: clamp(3rem, 7vw, 5rem) 0; }
+.legal .env { max-width: 46rem; }
+.legal h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.2rem); margin-bottom: 1.6rem; }
+.legal h2 { font-size: 1.35rem; margin: 2.2rem 0 .7rem; }
+.legal p, .legal li { color: var(--texto); }
+.legal p + p { margin-top: .8rem; }
+.legal ul { list-style: none; display: grid; gap: .6rem; margin-top: .6rem; }
+.legal li { padding-left: 1.1rem; position: relative; }
+.legal li::before { content: ''; position: absolute; left: 0; top: .62em; width: 6px; height: 6px; background: var(--greca); transform: rotate(45deg); }
+.legal dl { display: grid; grid-template-columns: max-content 1fr; gap: .45rem 1.4rem; margin: 1.2rem 0; padding: 1.2rem 1.3rem; background: var(--prado); }
+.legal dt { font-weight: 600; }
+.legal dd { margin: 0; }
+.legal code { font-family: var(--letra-cifras); font-size: .92em; }
+.aviso { margin-top: 1rem; padding: .8rem 1rem; border-left: 4px solid var(--teja); background: color-mix(in oklab, var(--teja) 8%, var(--niebla)); }
+.aviso-corto { font-weight: 600; color: var(--teja); }
+.legal-pie { border-top: 1px solid var(--linea); padding: 1.6rem 0 2.4rem; }
+.legal-pie .env { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; }
+.legal-pie a { padding: .5rem 0; }
+@media (max-width: 559px) { .legal dl { grid-template-columns: 1fr; } .legal dd { margin-bottom: .5rem; } }
+/* 404 */
+.no-hay { background: var(--monte); color: var(--claro); --foco: var(--claro); min-height: 100svh; display: grid; place-items: center; }
+.no { width: min(100% - 2 * var(--gutter), 40rem); padding: 3rem 0; }
+.no__greca { display: inline-block; }
+.no__greca span { display: block; width: min(60vw, 240px); aspect-ratio: 1.383; background: var(--greca); -webkit-mask: url(../marca/greca.svg) center / contain no-repeat; mask: url(../marca/greca.svg) center / contain no-repeat; }
+.no h1 { margin-top: 2rem; font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem); }
+.no p { margin-top: 1rem; color: var(--claro-suave); }
+.no__acc { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }

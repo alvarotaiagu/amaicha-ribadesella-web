@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amaicha · Hotel y apartamentos rurales en Camango, Ribadesella</title>
+<meta name="description" content="Casona de piedra con hórreo y jardín en Camango (Ribadesella, Asturias): siete habitaciones dobles y una individual, dos apartamentos con terraza o la casa entera para grupos.">
+<meta property="og:title" content="Amaicha · Hotel y apartamentos rurales en Ribadesella">
+<meta property="og:description" content="Casona de piedra con hórreo y jardín en Camango, entre Ribadesella y Llanes.">
+<link rel="preload" as="image" type="image/avif" imagesrcset="img/fotos/horreo-480.avif 480w, img/fotos/horreo-800.avif 800w, img/fotos/horreo-1200.avif 1200w, img/fotos/horreo-1600.avif 1600w" imagesizes="100vw" fetchpriority="high">
+<!-- script bloqueante: clase «js», entrar siempre arriba (checklist punto 12), ?sin-webgl y el mando de maqueta. -->
+<script>
+(function (d) {
+  var h = d.documentElement;
+  h.classList.add('js');
+  window.Amaicha = window.Amaicha || {};
+  // al recargar, Chrome devuelve la página a media portada (fijada): se entra siempre arriba, salvo con un #ancla
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  if (!location.hash) window.scrollTo(0, 0);
+  try {
+    var q = new URLSearchParams(location.search);
+    if (q.has('sin-webgl')) h.classList.add('sin-webgl');
+    // MANDO DE MAQUETA (no viaja al cliente): solo con ?revision
+    if (q.has('revision')) {
+      h.classList.add('revision');
+      if (q.get('densidad') === 'sobria') h.classList.add('densidad-sobria');
+    }
+  } catch (e) {}
+})(document);
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans:wdth,wght@75..125,300..700&family=Gantari:ital,wght@0,400..700;1,400&family=Sono:wght@400..600&display=swap">
+<link rel="stylesheet" href="css/base.css?v=797480bd">
+<link rel="stylesheet" href="css/estilos.css?v=f8803bbf">
+<link rel="stylesheet" href="css/lugar.css?v=9d9e5815">
+<link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="marca/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="marca/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#17211C">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="saltar" href="#principal">Saltar al contenido</a>
+
+<!-- ============ cabecera fija: la greca y la palabra AMAICHA (marca/greca.svg y marca/palabra.svg, con máscara en
+     currentColor); transparente sobre la portada oscura y con fondo niebla en cuanto se baja (.sc) ============ -->
+<header class="cab" id="cab">
+  <div class="cab__in">
+    <a class="marca" href="./" aria-label="Amaicha, a la portada"><span class="marca__greca" aria-hidden="true"></span><span class="marca__palabra" aria-hidden="true"></span></a>
+    <nav class="cab__nav" aria-label="Principal">
+      <a href="#quedarse">Quedarse</a>
+      <a href="#casa">La casa</a>
+      <a href="#lugar">El lugar</a>
+      <a href="#alrededor">Alrededor</a>
+    </nav>
+    <a class="cab__tel cifra" href="tel:+34661598965"><span class="vh">Teléfono: </span>661 59 89 65</a>
+    <a class="btn btn--acento cab__reservar" href="#reservar">Ver fechas</a>
+    <button class="cab__menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil"><span class="vh">Menú</span><i></i><i></i></button>
+  </div>
+  <div class="menu-movil" id="menu-movil" aria-hidden="true">
+    <nav aria-label="Menú">
+      <a href="#quedarse"><small>Hotel, apartamentos o la casa entera</small>Quedarse</a>
+      <a href="#desayuno"><small>Pan, bizcochos y mermeladas caseras</small>Desayuno</a>
+      <a href="#casa"><small>Por estancias</small>La casa</a>
+      <a href="#lugar"><small>Del acantilado al hórreo</small>El lugar</a>
+      <a href="#alrededor"><small>Costa, pueblos y Picos</small>Alrededor</a>
+      <a href="#reservar"><small>Su motor de reservas</small>Reservar</a>
+      <a href="#contacto"><small>Camango 44, Ribadesella</small>Contacto</a>
+    </nav>
+    <p class="menu-movil__tel"><a class="cifra" href="tel:+34661598965">661 59 89 65</a><a href="mailto:cris@amaicha.es">cris@amaicha.es</a></p>
+  </div>
+</header>
+<!-- iconos propios (24 × 24, trazo 1,6 en currentColor, esquinas rectas como la greca). Se usan con
+     <svg class="ico"><use href="#i-…"/></svg>; el <svg class="ico"> lleva width/height por CSS. -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="i-trazo" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"></g>
+  </defs>
+  <symbol id="i-cama" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M3 19V6M3 15h18v4M21 15v-3.5a2.5 2.5 0 0 0-2.5-2.5H11v6"/><path d="M5.5 12.5h3"/></g></symbol>
+  <symbol id="i-bano" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M3 12h18v2.5a5.5 5.5 0 0 1-5.5 5.5h-7A5.5 5.5 0 0 1 3 14.5V12Z"/><path d="M6 12V5.5A1.5 1.5 0 0 1 7.5 4h1A1.5 1.5 0 0 1 10 5.5M7 20l-1 1.5M17 20l1 1.5"/></g></symbol>
+  <symbol id="i-lluvia" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 9h14M7 9a5 5 0 0 1 10 0M12 4V2.5"/><path d="M8 13v1.5M12 13v1.5M16 13v1.5M10 17.5V19M14 17.5V19M8 21v.5M16 21v.5"/></g></symbol>
+  <symbol id="i-ventana" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 3h14v18H5zM12 3v18M5 11h14"/><path d="M8 15.5l2-2M14.5 7.5l2-2"/></g></symbol>
+  <symbol id="i-limpieza" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M14 3l-3.5 9M7 12h7l2 9H5l2-9Z"/><path d="M9 16.5v4.5M12.5 16.5v4.5"/><path d="M18 4v3M16.5 5.5h3M20 10v2M19 11h2"/></g></symbol>
+  <symbol id="i-calor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M4 7h16v11H4zM8 7v11M12 7v11M16 7v11M4 20.5v-2.5M20 20.5v-2.5"/><path d="M9 4.5c0-1 1-1 1-2M14 4.5c0-1 1-1 1-2"/></g></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M3 9.5a13 13 0 0 1 18 0M6 12.8a8.5 8.5 0 0 1 12 0M9 16a4 4 0 0 1 6 0"/><path d="M11.2 19.2h1.6v1.6h-1.6z"/></g></symbol>
+  <symbol id="i-hoja" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15Z"/><path d="M5 19l8-8M11 13h4M9 15v-3.5"/></g></symbol>
+  <symbol id="i-cocina" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M3 9h18v12H3zM3 13h18"/><path d="M7 9V6.5h4V9M15.5 3v3M7 17h2M15 17h2"/></g></symbol>
+  <symbol id="i-terraza" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M2.5 9L12 3.5 21.5 9M12 9v12M6 21v-5h12v5"/><path d="M4 9h16"/></g></symbol>
+  <symbol id="i-llave" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M4 9h6v6H4zM7 11.5h.01"/><path d="M10 12h11M18 12v3M15 12v2"/></g></symbol>
+  <symbol id="i-columpio" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M3 21L7 4h10l4 17M7 4h10"/><path d="M10 4v10M14 4v10M9 14h6"/></g></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M5 11V7h14v4"/><path d="M3 11h4v4h10v-4h4v7H3zM5 18v2M19 18v2"/></g></symbol>
+  <symbol id="i-arbol" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M12 2.5l6 6h-2.5l4 4.5h-3l3.5 4H4l3.5-4h-3l4-4.5H6l6-6Z"/><path d="M12 17v4.5"/></g></symbol>
+  <symbol id="i-flecha-izq" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></g></symbol>
+  <symbol id="i-flecha-der" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></g></symbol>
+  <symbol id="i-cerrar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M6 6l12 12M18 6L6 18"/></g></symbol>
+  <symbol id="i-pie" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M9 3.5a1.8 1.8 0 1 0 0 .01M8 8l-2 6M8 8l4 3 2 6M8 8l3-1 3 4M6 14l-2 7M14 17l1 4"/></g></symbol>
+  <symbol id="i-coche" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"><path d="M3 16v-4l2.5-5h13L21 12v4H3zM3 12h18"/><path d="M5 16v3h3v-3M16 16v3h3v-3M7 13.5h1M16 13.5h1"/></g></symbol>
+</svg>
+
+<main id="principal">
+
+<!-- ============ 1. PORTADA «La greca» (js/portada.js, Amaicha.portada): la greca del logo es la ventana a la foto del
+     hórreo y se abre escalón a escalón con el scroll hasta llenar la pantalla. El HTML de [data-modulo="portada"] es el
+     respaldo (sin JS, con movimiento reducido y en la versión sobria): la ventana ya abierta hasta el anillo de fuera,
+     con el anillo y los ganchos en marrón. La foto es el LCP (se precarga). ============ -->
+<section id="portada" class="portada" aria-labelledby="t-portada">
+  <div class="portada__fija">
+    <div class="portada__greca" data-modulo="portada" style="--g-razon:1.383;--v-an:59.50%;--v-al:82.28%">
+      <div class="portada__ventana"><picture data-foto="horreo"><source type="image/avif" srcset="img/fotos/horreo-480.avif 480w, img/fotos/horreo-800.avif 800w, img/fotos/horreo-1200.avif 1200w, img/fotos/horreo-1600.avif 1600w" sizes="100vw"><source type="image/webp" srcset="img/fotos/horreo-480.webp 480w, img/fotos/horreo-800.webp 800w, img/fotos/horreo-1200.webp 1200w, img/fotos/horreo-1600.webp 1600w" sizes="100vw"><img src="img/fotos/horreo-800.jpg" srcset="img/fotos/horreo-480.jpg 480w, img/fotos/horreo-800.jpg 800w, img/fotos/horreo-1200.jpg 1200w, img/fotos/horreo-1600.jpg 1600w" sizes="100vw" width="1600" height="1067" style="object-position:55.0% 42.0%" alt="El hórreo de Amaicha en el jardín, sobre sus pegoyos, con mesas de picnic y sombrillas" fetchpriority="high" loading="eager" decoding="async"></picture></div>
+      <svg class="portada__marco" viewBox="-9.708 -7.021 19.417 14.042" aria-hidden="true" focusable="false"><g transform="rotate(45)"><path class="pg-fuera" d="M-4.965 -4.965 4.965 -4.965 4.965 4.965 -4.965 4.965ZM-3.965 3.965 3.965 3.965 3.965 -3.965 -3.965 -3.965ZM4.965 -4.965 8.765 -4.965 8.765 -3.965 4.965 -3.965ZM3.965 -8.765 4.965 -8.765 4.965 -4.965 3.965 -4.965ZM7.765 -4.965 8.765 -4.965 8.765 -0.272 7.765 -0.272ZM0.273 -8.765 4.965 -8.765 4.965 -7.765 0.273 -7.765ZM5.865 -1.272 8.765 -1.272 8.765 -0.272 5.865 -0.272ZM0.273 -8.765 1.273 -8.765 1.273 -5.865 0.273 -5.865ZM5.865 -3.064 6.865 -3.064 6.865 -0.272 5.865 -0.272ZM0.273 -6.865 3.064 -6.865 3.064 -5.865 0.273 -5.865ZM-8.765 3.965 -4.965 3.965 -4.965 4.965 -8.765 4.965ZM-4.965 4.965 -3.965 4.965 -3.965 8.765 -4.965 8.765ZM-8.765 0.273 -7.765 0.273 -7.765 4.965 -8.765 4.965ZM-4.965 7.765 -0.272 7.765 -0.272 8.765 -4.965 8.765ZM-8.765 0.273 -5.865 0.273 -5.865 1.273 -8.765 1.273ZM-1.272 5.865 -0.272 5.865 -0.272 8.765 -1.272 8.765ZM-6.865 0.273 -5.865 0.273 -5.865 3.064 -6.865 3.064ZM-3.064 5.865 -0.272 5.865 -0.272 6.865 -3.064 6.865Z"/><path class="pg-medio" d="M-3.064 -3.064 3.064 -3.064 3.064 3.064 -3.064 3.064ZM-2.064 2.064 2.064 2.064 2.064 -2.064 -2.064 -2.064Z"/><path class="pg-centro" d="M-1.164 -1.164 1.164 -1.164 1.164 1.164 -1.164 1.164ZM0.18 0A0.18 0.18 0 0 0 -0.179 0A0.18 0.18 0 0 0 0.18 0Z"/></g></svg>
+    </div>
+    <div class="portada__texto">
+      <h1 id="t-portada" class="portada__tit">Hotel y apartamentos rurales entre Ribadesella y&nbsp;Llanes</h1>
+      <p class="portada__sub">Una casona de piedra con su hórreo y su jardín en Camango. Por habitaciones, en apartamento o la casa entera.</p>
+      <p class="portada__acc"><a class="btn btn--acento" href="#reservar">Ver fechas</a><a class="btn btn--linea-clara cifra" href="tel:+34661598965"><span class="vh">Llamar al </span>661 59 89 65</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. Tres formas de quedarse: fichas con cifras grandes, servicios con icono propio y condiciones aparte.
+     Sin JS se ven las tres seguidas; con JS, un selector (pestañas). Datos: data/amaicha.json → construir.mjs ============ -->
+<section id="quedarse" class="sec quedarse" aria-labelledby="t-quedarse">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-quedarse" class="sec-tit" data-aparece>Tres formas de quedarse</h2>
+      <p class="sec-txt">Una habitación de la casona, un apartamento para la familia o toda la casa para el grupo. Las tres, con el mismo jardín.</p>
+    </header>
+    <div class="formas__sel" role="tablist" aria-label="Formas de quedarse">
+      <button type="button" role="tab" id="tab-hotel" aria-controls="forma-hotel" aria-selected="true"><span class="formas__n cifra">8</span><b>Hotel</b><small>habitaciones</small></button>
+      <button type="button" role="tab" id="tab-apartamentos" aria-controls="forma-apartamentos" aria-selected="false" tabindex="-1"><span class="formas__n cifra">2</span><b>Apartamentos</b><small>apartamentos</small></button>
+      <button type="button" role="tab" id="tab-casa" aria-controls="forma-casa" aria-selected="false" tabindex="-1"><span class="formas__n cifra">1</span><b>Casa entera</b><small>casona entera</small></button>
+    </div>
+    <div class="formas">
+    <article class="forma" id="forma-hotel" role="tabpanel" aria-labelledby="t-forma-hotel" data-forma="hotel">
+      <figure class="forma__f"><button type="button" class="foto-btn" data-visor="hab-matrimonio" data-grupo="formas" aria-label="Ver más grande: Habitación doble con cama de matrimonio, cabecero de madera y ventana con contraventanas"><picture data-foto="hab-matrimonio"><source type="image/avif" srcset="img/fotos/hab-matrimonio-480.avif 480w, img/fotos/hab-matrimonio-800.avif 800w, img/fotos/hab-matrimonio-1200.avif 1200w, img/fotos/hab-matrimonio-1600.avif 1600w" sizes="(max-width: 899px) 92vw, 46vw"><source type="image/webp" srcset="img/fotos/hab-matrimonio-480.webp 480w, img/fotos/hab-matrimonio-800.webp 800w, img/fotos/hab-matrimonio-1200.webp 1200w, img/fotos/hab-matrimonio-1600.webp 1600w" sizes="(max-width: 899px) 92vw, 46vw"><img src="img/fotos/hab-matrimonio-800.jpg" srcset="img/fotos/hab-matrimonio-480.jpg 480w, img/fotos/hab-matrimonio-800.jpg 800w, img/fotos/hab-matrimonio-1200.jpg 1200w, img/fotos/hab-matrimonio-1600.jpg 1600w" sizes="(max-width: 899px) 92vw, 46vw" width="1600" height="1200" alt="Habitación doble con cama de matrimonio, cabecero de madera y ventana con contraventanas" loading="lazy" decoding="async"></picture></button></figure>
+      <div class="forma__cuerpo">
+        <p class="forma__tipo">Hotel</p>
+        <h3 class="forma__tit" id="t-forma-hotel">La casona, por habitaciones</h3>
+        <p class="forma__txt">Una casona asturiana de piedra con decoración rústica. Todas las habitaciones tienen baño privado y una ventana al exterior que da a los jardines.</p>
+        <dl class="forma__cifras">
+          <div><dt>habitaciones dobles</dt><dd class="cifra">7</dd></div>
+          <div><dt>individual</dt><dd class="cifra">1</dd></div>
+          <div><dt>con baño privado</dt><dd class="cifra">8</dd></div>
+        </dl>
+        <ul class="forma__serv">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-cama"/></svg><b>Matrimonio o dos camas</b><span>Tú eliges cómo quieres la doble</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-bano"/></svg><b>Baño privado</b><span>En cada habitación</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-lluvia"/></svg><b>Ducha de lluvia</b><span>Con secador</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-ventana"/></svg><b>Ventana al jardín</b><span>Todas son exteriores</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-limpieza"/></svg><b>Limpieza diaria</b></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-calor"/></svg><b>Calefacción</b></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-wifi"/></svg><b>Wifi y TV</b></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-hoja"/></svg><b>Amenities ecológicos</b></li>
+        </ul>
+        <div class="forma__cond">
+          <h4>Condiciones</h4>
+          <ul><li>Precio y noches libres: en su motor de reservas, al final de la página.</li></ul>
+        </div>
+        <a class="btn btn--oscuro" href="#reservar" data-reservar="hotel">Ver fechas<span class="vh">: hotel</span></a>
+      </div>
+    </article>
+    <article class="forma" id="forma-apartamentos" role="tabpanel" aria-labelledby="t-forma-apartamentos" data-forma="apartamentos">
+      <figure class="forma__f"><button type="button" class="foto-btn" data-visor="apto-salon" data-grupo="formas" aria-label="Ver más grande: Salón de un apartamento con sofá azul, cocina abierta al fondo y suelo de baldosa"><picture data-foto="apto-salon"><source type="image/avif" srcset="img/fotos/apto-salon-480.avif 480w, img/fotos/apto-salon-800.avif 800w, img/fotos/apto-salon-1200.avif 1200w, img/fotos/apto-salon-1600.avif 1600w, img/fotos/apto-salon-1920.avif 1920w, img/fotos/apto-salon-2048.avif 2048w" sizes="(max-width: 899px) 92vw, 46vw"><source type="image/webp" srcset="img/fotos/apto-salon-480.webp 480w, img/fotos/apto-salon-800.webp 800w, img/fotos/apto-salon-1200.webp 1200w, img/fotos/apto-salon-1600.webp 1600w, img/fotos/apto-salon-1920.webp 1920w, img/fotos/apto-salon-2048.webp 2048w" sizes="(max-width: 899px) 92vw, 46vw"><img src="img/fotos/apto-salon-800.jpg" srcset="img/fotos/apto-salon-480.jpg 480w, img/fotos/apto-salon-800.jpg 800w, img/fotos/apto-salon-1200.jpg 1200w, img/fotos/apto-salon-1600.jpg 1600w, img/fotos/apto-salon-1920.jpg 1920w, img/fotos/apto-salon-2048.jpg 2048w" sizes="(max-width: 899px) 92vw, 46vw" width="2048" height="1536" alt="Salón de un apartamento con sofá azul, cocina abierta al fondo y suelo de baldosa" loading="lazy" decoding="async"></picture></button></figure>
+      <div class="forma__cuerpo">
+        <p class="forma__tipo">Apartamentos</p>
+        <h3 class="forma__tit" id="t-forma-apartamentos">Dos apartamentos con terraza</h3>
+        <p class="forma__txt">Dos apartamentos independientes en el mismo edificio. Cada uno con dos dormitorios dobles, salón amplio y luminoso, cocina totalmente equipada y terraza privada.</p>
+        <dl class="forma__cifras">
+          <div><dt>apartamentos</dt><dd class="cifra">2</dd></div>
+          <div><dt>personas en cada uno</dt><dd class="cifra">4</dd></div>
+          <div><dt>dormitorios dobles</dt><dd class="cifra">2</dd></div>
+        </dl>
+        <ul class="forma__serv">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-cama"/></svg><b>Una de matrimonio y una de dos camas</b><span>Los dos dormitorios, dobles</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-cocina"/></svg><b>Cocina equipada</b><span>Abierta al salón</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-terraza"/></svg><b>Terraza privada</b><span>Para cada apartamento</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-bano"/></svg><b>Baño completo con ventana</b><span>Ducha, bidé, toallas y secador</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-llave"/></svg><b>Entrega de llaves</b></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-calor"/></svg><b>Calefacción</b></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-wifi"/></svg><b>Wifi y TV</b></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-columpio"/></svg><b>Área infantil</b><span>En el jardín común</span></li>
+        </ul>
+        <div class="forma__cond">
+          <h4>Condiciones</h4>
+          <ul><li>Pensados para familias.</li><li>Aparcamiento privado y jardín común.</li><li>Mascotas: pregunta antes de reservar.</li></ul>
+        </div>
+        <a class="btn btn--oscuro" href="#reservar" data-reservar="apartamentos">Ver fechas<span class="vh">: apartamentos</span></a>
+      </div>
+    </article>
+    <article class="forma" id="forma-casa" role="tabpanel" aria-labelledby="t-forma-casa" data-forma="casa">
+      <figure class="forma__f"><button type="button" class="foto-btn" data-visor="comun-comedor" data-grupo="formas" aria-label="Ver más grande: Comedor de la casona con una mesa larga, sillas de madera y lámpara de hierro bajo las vigas"><picture data-foto="comun-comedor"><source type="image/avif" srcset="img/fotos/comun-comedor-480.avif 480w, img/fotos/comun-comedor-800.avif 800w, img/fotos/comun-comedor-1200.avif 1200w, img/fotos/comun-comedor-1600.avif 1600w" sizes="(max-width: 899px) 92vw, 46vw"><source type="image/webp" srcset="img/fotos/comun-comedor-480.webp 480w, img/fotos/comun-comedor-800.webp 800w, img/fotos/comun-comedor-1200.webp 1200w, img/fotos/comun-comedor-1600.webp 1600w" sizes="(max-width: 899px) 92vw, 46vw"><img src="img/fotos/comun-comedor-800.jpg" srcset="img/fotos/comun-comedor-480.jpg 480w, img/fotos/comun-comedor-800.jpg 800w, img/fotos/comun-comedor-1200.jpg 1200w, img/fotos/comun-comedor-1600.jpg 1600w" sizes="(max-width: 899px) 92vw, 46vw" width="1600" height="901" alt="Comedor de la casona con una mesa larga, sillas de madera y lámpara de hierro bajo las vigas" loading="lazy" decoding="async"></picture></button></figure>
+      <div class="forma__cuerpo">
+        <p class="forma__tipo">Casa entera</p>
+        <h3 class="forma__tit" id="t-forma-casa">Toda la casona para el grupo</h3>
+        <p class="forma__txt">Para reuniones de familia, amigos o retiros: la casona entera, con sus zonas comunes amplias, la cocina equipada y el jardín.</p>
+        <dl class="forma__cifras">
+          <div><dt>habitaciones</dt><dd class="cifra">8</dd></div>
+          <div><dt>dobles e individual</dt><dd class="cifra">7 + 1</dd></div>
+          <div><dt>días: cancelación gratis</dt><dd class="cifra">30</dd></div>
+        </dl>
+        <ul class="forma__serv">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-bano"/></svg><b>Baño privado</b><span>En las ocho habitaciones</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-sofa"/></svg><b>Zonas comunes amplias</b><span>Salón y comedor de mesa larga</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-cocina"/></svg><b>Cocina equipada</b><span>Para el grupo</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-arbol"/></svg><b>Jardín</b><span>Con el hórreo</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-calor"/></svg><b>Calefacción</b></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-ventana"/></svg><b>Ventanas exteriores</b><span>En todas las habitaciones</span></li>
+        </ul>
+        <div class="forma__cond">
+          <h4>Condiciones</h4>
+          <ul><li>Sin eventos ni despedidas.</li><li>No se admiten animales.</li><li>Cancelación gratuita hasta 30 días antes.</li></ul>
+        </div>
+        <a class="btn btn--oscuro" href="#reservar" data-reservar="casa">Ver fechas<span class="vh">: casa entera</span></a>
+      </div>
+    </article>
+    </div>
+    <div class="vistazo" id="vistazo">
+      <h3 class="vistazo__tit">De un vistazo</h3>
+      <div class="vistazo__caja" role="group" aria-label="Tabla comparativa de las tres formas de quedarse">
+        <table class="vistazo__tabla">
+          <caption class="vh">Hotel, apartamentos y casa entera comparados</caption>
+          <thead><tr><th scope="col"><span class="vh">Dato</span></th><th scope="col">Hotel</th><th scope="col">Apartamentos</th><th scope="col">Casa entera</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Qué es</th><td>Una habitación de la casona</td><td>Un apartamento independiente</td><td>La casona entera</td></tr>
+            <tr><th scope="row">Dormitorios</th><td>7 dobles y 1 individual, a elegir</td><td>2 dobles en cada uno</td><td>7 dobles y 1 individual</td></tr>
+            <tr><th scope="row">Personas</th><td>Según la habitación</td><td>Hasta 4 por apartamento</td><td>Por confirmar</td></tr>
+            <tr><th scope="row">Baño</th><td>Privado en cada habitación</td><td>Completo, con ventana</td><td>Privado en cada habitación</td></tr>
+            <tr><th scope="row">Cocina</th><td>No consta</td><td>Totalmente equipada</td><td>Equipada</td></tr>
+            <tr><th scope="row">Fuera</th><td>El jardín</td><td>Terraza privada y jardín común</td><td>El jardín</td></tr>
+            <tr><th scope="row">Animales</th><td>No consta</td><td>Pregunta antes</td><td>No se admiten</td></tr>
+            <tr><th scope="row">Cancelación</th><td>La de su motor</td><td>La de su motor</td><td>Gratis hasta 30 días antes</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. Desayuno casero ============ -->
+<section id="desayuno" class="sec desayuno" aria-labelledby="t-desayuno">
+  <div class="env desayuno__in">
+    <figure class="desayuno__f">
+      <button type="button" class="foto-btn" data-visor="desayuno" data-grupo="desayuno" aria-label="Ver más grande: el desayuno casero"><picture data-foto="desayuno"><source type="image/avif" srcset="img/fotos/desayuno-480.avif 480w, img/fotos/desayuno-800.avif 800w, img/fotos/desayuno-1000.avif 1000w" sizes="(max-width: 799px) 92vw, 40vw"><source type="image/webp" srcset="img/fotos/desayuno-480.webp 480w, img/fotos/desayuno-800.webp 800w, img/fotos/desayuno-1000.webp 1000w" sizes="(max-width: 799px) 92vw, 40vw"><img src="img/fotos/desayuno-800.jpg" srcset="img/fotos/desayuno-480.jpg 480w, img/fotos/desayuno-800.jpg 800w, img/fotos/desayuno-1000.jpg 1000w" sizes="(max-width: 799px) 92vw, 40vw" width="1000" height="988" alt="Mesa del desayuno con bizcocho en rodajas, zumo de naranja, mermeladas y tazas" loading="lazy" decoding="async"></picture></button>
+    </figure>
+    <div class="desayuno__txt">
+      <h2 id="t-desayuno" class="sec-tit" data-aparece>Desayuno casero</h2>
+      <ul class="desayuno__lista">
+        <li>Pan</li>
+        <li>Bizcochos</li>
+        <li>Mermeladas caseras</li>
+        <li>Tomate rallado</li>
+        <li>Aguacate</li>
+        <li>Fruta de temporada de sus árboles</li>
+      </ul>
+      <p class="desayuno__nota">Si tienes alguna intolerancia o alergia, avísalo con antelación y lo adaptan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. La casa por estancias: índice fijo que marca la estancia que se ve, fotos sin marco con las alturas
+     igualadas por fila y el visor que abre por NOMBRE de archivo (checklist 11) ============ -->
+<section id="casa" class="sec casa" aria-labelledby="t-casa">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-casa" class="sec-tit" data-aparece>La casa, por estancias</h2>
+      <p class="sec-txt">Pulsa cualquier foto para verla grande.</p>
+    </header>
+    <div class="estancias">
+    <nav class="estancias__indice" aria-label="Estancias de la casa">
+      <ol>
+        <li><a href="#est-comun" data-est="comun" aria-current="true"><span class="estancias__largo">La zona común</span><span class="estancias__corto" aria-hidden="true">Común</span><span class="estancias__n cifra" aria-hidden="true">6</span></a></li>
+        <li><a href="#est-habitaciones" data-est="habitaciones"><span class="estancias__largo">Las habitaciones del hotel</span><span class="estancias__corto" aria-hidden="true">Hotel</span><span class="estancias__n cifra" aria-hidden="true">6</span></a></li>
+        <li><a href="#est-apartamentos-fotos" data-est="apartamentos-fotos"><span class="estancias__largo">Los apartamentos</span><span class="estancias__corto" aria-hidden="true">Apartamentos</span><span class="estancias__n cifra" aria-hidden="true">5</span></a></li>
+        <li><a href="#est-jardin" data-est="jardin"><span class="estancias__largo">Jardín, hórreo y corredor</span><span class="estancias__corto" aria-hidden="true">Jardín</span><span class="estancias__n cifra" aria-hidden="true">6</span></a></li>
+      </ol>
+    </nav>
+      <div class="estancias__grupos">
+      <section class="estancia" id="est-comun" aria-labelledby="t-est-comun">
+        <h3 class="estancia__tit" id="t-est-comun">La zona común</h3>
+        <p class="estancia__txt">Piedra, vigas de madera vista, la chimenea y el comedor de mesa larga.</p>
+        <div class="filas">
+          <figure class="foto" style="--r:1.776"><button type="button" class="foto-btn" data-visor="comun-salon" data-grupo="casa" aria-label="Ver más grande: Salón con sofás azules y cojines rojos; al fondo, la escalera de madera y el muro de piedra"><picture data-foto="comun-salon"><source type="image/avif" srcset="img/fotos/comun-salon-480.avif 480w, img/fotos/comun-salon-800.avif 800w, img/fotos/comun-salon-1200.avif 1200w, img/fotos/comun-salon-1600.avif 1600w, img/fotos/comun-salon-1920.avif 1920w, img/fotos/comun-salon-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/comun-salon-480.webp 480w, img/fotos/comun-salon-800.webp 800w, img/fotos/comun-salon-1200.webp 1200w, img/fotos/comun-salon-1600.webp 1600w, img/fotos/comun-salon-1920.webp 1920w, img/fotos/comun-salon-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/comun-salon-800.jpg" srcset="img/fotos/comun-salon-480.jpg 480w, img/fotos/comun-salon-800.jpg 800w, img/fotos/comun-salon-1200.jpg 1200w, img/fotos/comun-salon-1600.jpg 1600w, img/fotos/comun-salon-1920.jpg 1920w, img/fotos/comun-salon-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1153" alt="Salón con sofás azules y cojines rojos; al fondo, la escalera de madera y el muro de piedra" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.776"><button type="button" class="foto-btn" data-visor="comun-comedor" data-grupo="casa" aria-label="Ver más grande: Comedor de mesa larga con sillas de madera bajo una lámpara de hierro"><picture data-foto="comun-comedor"><source type="image/avif" srcset="img/fotos/comun-comedor-480.avif 480w, img/fotos/comun-comedor-800.avif 800w, img/fotos/comun-comedor-1200.avif 1200w, img/fotos/comun-comedor-1600.avif 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/comun-comedor-480.webp 480w, img/fotos/comun-comedor-800.webp 800w, img/fotos/comun-comedor-1200.webp 1200w, img/fotos/comun-comedor-1600.webp 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/comun-comedor-800.jpg" srcset="img/fotos/comun-comedor-480.jpg 480w, img/fotos/comun-comedor-800.jpg 800w, img/fotos/comun-comedor-1200.jpg 1200w, img/fotos/comun-comedor-1600.jpg 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1600" height="901" alt="Comedor de mesa larga con sillas de madera bajo una lámpara de hierro" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.778"><button type="button" class="foto-btn" data-visor="comun-chimenea" data-grupo="casa" aria-label="Ver más grande: Salón con sofás claros frente a la chimenea y un ventanal al jardín"><picture data-foto="comun-chimenea"><source type="image/avif" srcset="img/fotos/comun-chimenea-480.avif 480w, img/fotos/comun-chimenea-800.avif 800w, img/fotos/comun-chimenea-1200.avif 1200w, img/fotos/comun-chimenea-1600.avif 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/comun-chimenea-480.webp 480w, img/fotos/comun-chimenea-800.webp 800w, img/fotos/comun-chimenea-1200.webp 1200w, img/fotos/comun-chimenea-1600.webp 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/comun-chimenea-800.jpg" srcset="img/fotos/comun-chimenea-480.jpg 480w, img/fotos/comun-chimenea-800.jpg 800w, img/fotos/comun-chimenea-1200.jpg 1200w, img/fotos/comun-chimenea-1600.jpg 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1600" height="900" alt="Salón con sofás claros frente a la chimenea y un ventanal al jardín" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.776"><button type="button" class="foto-btn" data-visor="comun-escalera" data-grupo="casa" aria-label="Ver más grande: Comedor junto a la escalera de madera y el muro de piedra"><picture data-foto="comun-escalera"><source type="image/avif" srcset="img/fotos/comun-escalera-480.avif 480w, img/fotos/comun-escalera-800.avif 800w, img/fotos/comun-escalera-1000.avif 1000w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/comun-escalera-480.webp 480w, img/fotos/comun-escalera-800.webp 800w, img/fotos/comun-escalera-1000.webp 1000w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/comun-escalera-800.jpg" srcset="img/fotos/comun-escalera-480.jpg 480w, img/fotos/comun-escalera-800.jpg 800w, img/fotos/comun-escalera-1000.jpg 1000w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1000" height="563" alt="Comedor junto a la escalera de madera y el muro de piedra" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.778"><button type="button" class="foto-btn" data-visor="comun-ventanales" data-grupo="casa" aria-label="Ver más grande: Salón de sofás rojos junto a los ventanales y la mesa del comedor"><picture data-foto="comun-ventanales"><source type="image/avif" srcset="img/fotos/comun-ventanales-480.avif 480w, img/fotos/comun-ventanales-800.avif 800w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/comun-ventanales-480.webp 480w, img/fotos/comun-ventanales-800.webp 800w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/comun-ventanales-800.jpg" srcset="img/fotos/comun-ventanales-480.jpg 480w, img/fotos/comun-ventanales-800.jpg 800w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="800" height="450" alt="Salón de sofás rojos junto a los ventanales y la mesa del comedor" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.633"><button type="button" class="foto-btn" data-visor="comun-cocina" data-grupo="casa" aria-label="Ver más grande: Cocina amplia con encimeras de acero y ventana al jardín"><picture data-foto="comun-cocina"><source type="image/avif" srcset="img/fotos/comun-cocina-480.avif 480w, img/fotos/comun-cocina-800.avif 800w, img/fotos/comun-cocina-1200.avif 1200w, img/fotos/comun-cocina-1600.avif 1600w, img/fotos/comun-cocina-1920.avif 1920w, img/fotos/comun-cocina-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/comun-cocina-480.webp 480w, img/fotos/comun-cocina-800.webp 800w, img/fotos/comun-cocina-1200.webp 1200w, img/fotos/comun-cocina-1600.webp 1600w, img/fotos/comun-cocina-1920.webp 1920w, img/fotos/comun-cocina-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/comun-cocina-800.jpg" srcset="img/fotos/comun-cocina-480.jpg 480w, img/fotos/comun-cocina-800.jpg 800w, img/fotos/comun-cocina-1200.jpg 1200w, img/fotos/comun-cocina-1600.jpg 1600w, img/fotos/comun-cocina-1920.jpg 1920w, img/fotos/comun-cocina-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1254" alt="Cocina amplia con encimeras de acero y ventana al jardín" loading="lazy" decoding="async"></picture></button></figure>
+        </div>
+      </section>
+      <section class="estancia" id="est-habitaciones" aria-labelledby="t-est-habitaciones">
+        <h3 class="estancia__tit" id="t-est-habitaciones">Las habitaciones del hotel</h3>
+        <p class="estancia__txt">Siete dobles y una individual, cada una con su baño y su ventana al jardín.</p>
+        <div class="filas">
+          <figure class="foto" style="--r:1.333"><button type="button" class="foto-btn" data-visor="hab-matrimonio" data-grupo="casa" aria-label="Ver más grande: Habitación doble con cama de matrimonio y contraventanas de madera"><picture data-foto="hab-matrimonio"><source type="image/avif" srcset="img/fotos/hab-matrimonio-480.avif 480w, img/fotos/hab-matrimonio-800.avif 800w, img/fotos/hab-matrimonio-1200.avif 1200w, img/fotos/hab-matrimonio-1600.avif 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/hab-matrimonio-480.webp 480w, img/fotos/hab-matrimonio-800.webp 800w, img/fotos/hab-matrimonio-1200.webp 1200w, img/fotos/hab-matrimonio-1600.webp 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/hab-matrimonio-800.jpg" srcset="img/fotos/hab-matrimonio-480.jpg 480w, img/fotos/hab-matrimonio-800.jpg 800w, img/fotos/hab-matrimonio-1200.jpg 1200w, img/fotos/hab-matrimonio-1600.jpg 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1600" height="1200" alt="Habitación doble con cama de matrimonio y contraventanas de madera" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.333"><button type="button" class="foto-btn" data-visor="hab-azul" data-grupo="casa" aria-label="Ver más grande: Habitación de paredes azules con dos camas y balcón"><picture data-foto="hab-azul"><source type="image/avif" srcset="img/fotos/hab-azul-480.avif 480w, img/fotos/hab-azul-800.avif 800w, img/fotos/hab-azul-1200.avif 1200w, img/fotos/hab-azul-1600.avif 1600w, img/fotos/hab-azul-1800.avif 1800w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/hab-azul-480.webp 480w, img/fotos/hab-azul-800.webp 800w, img/fotos/hab-azul-1200.webp 1200w, img/fotos/hab-azul-1600.webp 1600w, img/fotos/hab-azul-1800.webp 1800w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/hab-azul-800.jpg" srcset="img/fotos/hab-azul-480.jpg 480w, img/fotos/hab-azul-800.jpg 800w, img/fotos/hab-azul-1200.jpg 1200w, img/fotos/hab-azul-1600.jpg 1600w, img/fotos/hab-azul-1800.jpg 1800w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1800" height="1350" alt="Habitación de paredes azules con dos camas y balcón" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.280"><button type="button" class="foto-btn" data-visor="hab-morada" data-grupo="casa" aria-label="Ver más grande: Habitación con cabecero morado y aplique de pared"><picture data-foto="hab-morada"><source type="image/avif" srcset="img/fotos/hab-morada-480.avif 480w, img/fotos/hab-morada-800.avif 800w, img/fotos/hab-morada-1200.avif 1200w, img/fotos/hab-morada-1600.avif 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/hab-morada-480.webp 480w, img/fotos/hab-morada-800.webp 800w, img/fotos/hab-morada-1200.webp 1200w, img/fotos/hab-morada-1600.webp 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/hab-morada-800.jpg" srcset="img/fotos/hab-morada-480.jpg 480w, img/fotos/hab-morada-800.jpg 800w, img/fotos/hab-morada-1200.jpg 1200w, img/fotos/hab-morada-1600.jpg 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1600" height="1250" alt="Habitación con cabecero morado y aplique de pared" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.580"><button type="button" class="foto-btn" data-visor="hab-flores" data-grupo="casa" aria-label="Ver más grande: Habitación con colcha de flores y cabecero tapizado"><picture data-foto="hab-flores"><source type="image/avif" srcset="img/fotos/hab-flores-480.avif 480w, img/fotos/hab-flores-800.avif 800w, img/fotos/hab-flores-1200.avif 1200w, img/fotos/hab-flores-1600.avif 1600w, img/fotos/hab-flores-1920.avif 1920w, img/fotos/hab-flores-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/hab-flores-480.webp 480w, img/fotos/hab-flores-800.webp 800w, img/fotos/hab-flores-1200.webp 1200w, img/fotos/hab-flores-1600.webp 1600w, img/fotos/hab-flores-1920.webp 1920w, img/fotos/hab-flores-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/hab-flores-800.jpg" srcset="img/fotos/hab-flores-480.jpg 480w, img/fotos/hab-flores-800.jpg 800w, img/fotos/hab-flores-1200.jpg 1200w, img/fotos/hab-flores-1600.jpg 1600w, img/fotos/hab-flores-1920.jpg 1920w, img/fotos/hab-flores-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1296" alt="Habitación con colcha de flores y cabecero tapizado" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.778"><button type="button" class="foto-btn" data-visor="hab-dos-camas" data-grupo="casa" aria-label="Ver más grande: Habitación con dos camas y cabecero de forja"><picture data-foto="hab-dos-camas"><source type="image/avif" srcset="img/fotos/hab-dos-camas-480.avif 480w, img/fotos/hab-dos-camas-800.avif 800w, img/fotos/hab-dos-camas-1200.avif 1200w, img/fotos/hab-dos-camas-1554.avif 1554w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/hab-dos-camas-480.webp 480w, img/fotos/hab-dos-camas-800.webp 800w, img/fotos/hab-dos-camas-1200.webp 1200w, img/fotos/hab-dos-camas-1554.webp 1554w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/hab-dos-camas-800.jpg" srcset="img/fotos/hab-dos-camas-480.jpg 480w, img/fotos/hab-dos-camas-800.jpg 800w, img/fotos/hab-dos-camas-1200.jpg 1200w, img/fotos/hab-dos-camas-1554.jpg 1554w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1554" height="874" alt="Habitación con dos camas y cabecero de forja" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.333"><button type="button" class="foto-btn" data-visor="hab-bano" data-grupo="casa" aria-label="Ver más grande: Baño con mampara, lavabo y toallero"><picture data-foto="hab-bano"><source type="image/avif" srcset="img/fotos/hab-bano-480.avif 480w, img/fotos/hab-bano-800.avif 800w, img/fotos/hab-bano-1200.avif 1200w, img/fotos/hab-bano-1600.avif 1600w, img/fotos/hab-bano-1920.avif 1920w, img/fotos/hab-bano-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/hab-bano-480.webp 480w, img/fotos/hab-bano-800.webp 800w, img/fotos/hab-bano-1200.webp 1200w, img/fotos/hab-bano-1600.webp 1600w, img/fotos/hab-bano-1920.webp 1920w, img/fotos/hab-bano-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/hab-bano-800.jpg" srcset="img/fotos/hab-bano-480.jpg 480w, img/fotos/hab-bano-800.jpg 800w, img/fotos/hab-bano-1200.jpg 1200w, img/fotos/hab-bano-1600.jpg 1600w, img/fotos/hab-bano-1920.jpg 1920w, img/fotos/hab-bano-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1536" alt="Baño con mampara, lavabo y toallero" loading="lazy" decoding="async"></picture></button></figure>
+        </div>
+      </section>
+      <section class="estancia" id="est-apartamentos-fotos" aria-labelledby="t-est-apartamentos-fotos">
+        <h3 class="estancia__tit" id="t-est-apartamentos-fotos">Los apartamentos</h3>
+        <p class="estancia__txt">Salón con cocina abierta, dos dormitorios dobles y su terraza.</p>
+        <div class="filas">
+          <figure class="foto" style="--r:1.333"><button type="button" class="foto-btn" data-visor="apto-salon" data-grupo="casa" aria-label="Ver más grande: Salón de apartamento con sofá azul y cocina abierta"><picture data-foto="apto-salon"><source type="image/avif" srcset="img/fotos/apto-salon-480.avif 480w, img/fotos/apto-salon-800.avif 800w, img/fotos/apto-salon-1200.avif 1200w, img/fotos/apto-salon-1600.avif 1600w, img/fotos/apto-salon-1920.avif 1920w, img/fotos/apto-salon-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/apto-salon-480.webp 480w, img/fotos/apto-salon-800.webp 800w, img/fotos/apto-salon-1200.webp 1200w, img/fotos/apto-salon-1600.webp 1600w, img/fotos/apto-salon-1920.webp 1920w, img/fotos/apto-salon-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/apto-salon-800.jpg" srcset="img/fotos/apto-salon-480.jpg 480w, img/fotos/apto-salon-800.jpg 800w, img/fotos/apto-salon-1200.jpg 1200w, img/fotos/apto-salon-1600.jpg 1600w, img/fotos/apto-salon-1920.jpg 1920w, img/fotos/apto-salon-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1536" alt="Salón de apartamento con sofá azul y cocina abierta" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.297"><button type="button" class="foto-btn" data-visor="apto-comedor" data-grupo="casa" aria-label="Ver más grande: Comedor de apartamento bajo el techo de vigas, con ventana al prado"><picture data-foto="apto-comedor"><source type="image/avif" srcset="img/fotos/apto-comedor-480.avif 480w, img/fotos/apto-comedor-800.avif 800w, img/fotos/apto-comedor-1200.avif 1200w, img/fotos/apto-comedor-1600.avif 1600w, img/fotos/apto-comedor-1920.avif 1920w, img/fotos/apto-comedor-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/apto-comedor-480.webp 480w, img/fotos/apto-comedor-800.webp 800w, img/fotos/apto-comedor-1200.webp 1200w, img/fotos/apto-comedor-1600.webp 1600w, img/fotos/apto-comedor-1920.webp 1920w, img/fotos/apto-comedor-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/apto-comedor-800.jpg" srcset="img/fotos/apto-comedor-480.jpg 480w, img/fotos/apto-comedor-800.jpg 800w, img/fotos/apto-comedor-1200.jpg 1200w, img/fotos/apto-comedor-1600.jpg 1600w, img/fotos/apto-comedor-1920.jpg 1920w, img/fotos/apto-comedor-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1579" alt="Comedor de apartamento bajo el techo de vigas, con ventana al prado" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.315"><button type="button" class="foto-btn" data-visor="apto-cocina" data-grupo="casa" aria-label="Ver más grande: Cocina de madera con lavadora y horno, abierta al comedor"><picture data-foto="apto-cocina"><source type="image/avif" srcset="img/fotos/apto-cocina-480.avif 480w, img/fotos/apto-cocina-800.avif 800w, img/fotos/apto-cocina-1200.avif 1200w, img/fotos/apto-cocina-1600.avif 1600w, img/fotos/apto-cocina-1920.avif 1920w, img/fotos/apto-cocina-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/apto-cocina-480.webp 480w, img/fotos/apto-cocina-800.webp 800w, img/fotos/apto-cocina-1200.webp 1200w, img/fotos/apto-cocina-1600.webp 1600w, img/fotos/apto-cocina-1920.webp 1920w, img/fotos/apto-cocina-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/apto-cocina-800.jpg" srcset="img/fotos/apto-cocina-480.jpg 480w, img/fotos/apto-cocina-800.jpg 800w, img/fotos/apto-cocina-1200.jpg 1200w, img/fotos/apto-cocina-1600.jpg 1600w, img/fotos/apto-cocina-1920.jpg 1920w, img/fotos/apto-cocina-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1558" alt="Cocina de madera con lavadora y horno, abierta al comedor" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.259"><button type="button" class="foto-btn" data-visor="apto-matrimonio" data-grupo="casa" aria-label="Ver más grande: Dormitorio de matrimonio con vigas de madera"><picture data-foto="apto-matrimonio"><source type="image/avif" srcset="img/fotos/apto-matrimonio-480.avif 480w, img/fotos/apto-matrimonio-800.avif 800w, img/fotos/apto-matrimonio-1200.avif 1200w, img/fotos/apto-matrimonio-1600.avif 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/apto-matrimonio-480.webp 480w, img/fotos/apto-matrimonio-800.webp 800w, img/fotos/apto-matrimonio-1200.webp 1200w, img/fotos/apto-matrimonio-1600.webp 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/apto-matrimonio-800.jpg" srcset="img/fotos/apto-matrimonio-480.jpg 480w, img/fotos/apto-matrimonio-800.jpg 800w, img/fotos/apto-matrimonio-1200.jpg 1200w, img/fotos/apto-matrimonio-1600.jpg 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1600" height="1271" alt="Dormitorio de matrimonio con vigas de madera" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.333"><button type="button" class="foto-btn" data-visor="apto-dos-camas" data-grupo="casa" aria-label="Ver más grande: Dormitorio con dos camas y puerta a la terraza"><picture data-foto="apto-dos-camas"><source type="image/avif" srcset="img/fotos/apto-dos-camas-480.avif 480w, img/fotos/apto-dos-camas-800.avif 800w, img/fotos/apto-dos-camas-1200.avif 1200w, img/fotos/apto-dos-camas-1600.avif 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/apto-dos-camas-480.webp 480w, img/fotos/apto-dos-camas-800.webp 800w, img/fotos/apto-dos-camas-1200.webp 1200w, img/fotos/apto-dos-camas-1600.webp 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/apto-dos-camas-800.jpg" srcset="img/fotos/apto-dos-camas-480.jpg 480w, img/fotos/apto-dos-camas-800.jpg 800w, img/fotos/apto-dos-camas-1200.jpg 1200w, img/fotos/apto-dos-camas-1600.jpg 1600w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1600" height="1200" alt="Dormitorio con dos camas y puerta a la terraza" loading="lazy" decoding="async"></picture></button></figure>
+        </div>
+      </section>
+      <section class="estancia" id="est-jardin" aria-labelledby="t-est-jardin">
+        <h3 class="estancia__tit" id="t-est-jardin">Jardín, hórreo y corredor</h3>
+        <p class="estancia__txt">El hórreo sobre sus pegoyos, las mesas de madera, los frutales y el corredor de sillones de mimbre.</p>
+        <div class="filas">
+          <figure class="foto" style="--r:1.500"><button type="button" class="foto-btn" data-visor="jardin-casona" data-grupo="casa" aria-label="Ver más grande: Jardín de césped con la casona de piedra al fondo y los tejados de teja"><picture data-foto="jardin-casona"><source type="image/avif" srcset="img/fotos/jardin-casona-480.avif 480w, img/fotos/jardin-casona-800.avif 800w, img/fotos/jardin-casona-1200.avif 1200w, img/fotos/jardin-casona-1600.avif 1600w, img/fotos/jardin-casona-1920.avif 1920w, img/fotos/jardin-casona-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/jardin-casona-480.webp 480w, img/fotos/jardin-casona-800.webp 800w, img/fotos/jardin-casona-1200.webp 1200w, img/fotos/jardin-casona-1600.webp 1600w, img/fotos/jardin-casona-1920.webp 1920w, img/fotos/jardin-casona-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/jardin-casona-800.jpg" srcset="img/fotos/jardin-casona-480.jpg 480w, img/fotos/jardin-casona-800.jpg 800w, img/fotos/jardin-casona-1200.jpg 1200w, img/fotos/jardin-casona-1600.jpg 1600w, img/fotos/jardin-casona-1920.jpg 1920w, img/fotos/jardin-casona-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1365" alt="Jardín de césped con la casona de piedra al fondo y los tejados de teja" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.499"><button type="button" class="foto-btn" data-visor="horreo-jardin" data-grupo="casa" aria-label="Ver más grande: El hórreo sobre sus pegoyos con el jardín, una sombrilla y una mesa de picnic"><picture data-foto="horreo-jardin"><source type="image/avif" srcset="img/fotos/horreo-jardin-480.avif 480w, img/fotos/horreo-jardin-800.avif 800w, img/fotos/horreo-jardin-1200.avif 1200w, img/fotos/horreo-jardin-1400.avif 1400w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/horreo-jardin-480.webp 480w, img/fotos/horreo-jardin-800.webp 800w, img/fotos/horreo-jardin-1200.webp 1200w, img/fotos/horreo-jardin-1400.webp 1400w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/horreo-jardin-800.jpg" srcset="img/fotos/horreo-jardin-480.jpg 480w, img/fotos/horreo-jardin-800.jpg 800w, img/fotos/horreo-jardin-1200.jpg 1200w, img/fotos/horreo-jardin-1400.jpg 1400w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1400" height="934" alt="El hórreo sobre sus pegoyos con el jardín, una sombrilla y una mesa de picnic" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.500"><button type="button" class="foto-btn" data-visor="casa-roja" data-grupo="casa" aria-label="Ver más grande: Casa roja de dos plantas en el prado, con frutales"><picture data-foto="casa-roja"><source type="image/avif" srcset="img/fotos/casa-roja-480.avif 480w, img/fotos/casa-roja-800.avif 800w, img/fotos/casa-roja-1200.avif 1200w, img/fotos/casa-roja-1600.avif 1600w, img/fotos/casa-roja-1920.avif 1920w, img/fotos/casa-roja-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/casa-roja-480.webp 480w, img/fotos/casa-roja-800.webp 800w, img/fotos/casa-roja-1200.webp 1200w, img/fotos/casa-roja-1600.webp 1600w, img/fotos/casa-roja-1920.webp 1920w, img/fotos/casa-roja-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/casa-roja-800.jpg" srcset="img/fotos/casa-roja-480.jpg 480w, img/fotos/casa-roja-800.jpg 800w, img/fotos/casa-roja-1200.jpg 1200w, img/fotos/casa-roja-1600.jpg 1600w, img/fotos/casa-roja-1920.jpg 1920w, img/fotos/casa-roja-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1365" alt="Casa roja de dos plantas en el prado, con frutales" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.333"><button type="button" class="foto-btn" data-visor="casa-roja-porche" data-grupo="casa" aria-label="Ver más grande: Porche de la casa roja con mesa y sillas de exterior"><picture data-foto="casa-roja-porche"><source type="image/avif" srcset="img/fotos/casa-roja-porche-480.avif 480w, img/fotos/casa-roja-porche-800.avif 800w, img/fotos/casa-roja-porche-1200.avif 1200w, img/fotos/casa-roja-porche-1600.avif 1600w, img/fotos/casa-roja-porche-1920.avif 1920w, img/fotos/casa-roja-porche-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/casa-roja-porche-480.webp 480w, img/fotos/casa-roja-porche-800.webp 800w, img/fotos/casa-roja-porche-1200.webp 1200w, img/fotos/casa-roja-porche-1600.webp 1600w, img/fotos/casa-roja-porche-1920.webp 1920w, img/fotos/casa-roja-porche-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/casa-roja-porche-800.jpg" srcset="img/fotos/casa-roja-porche-480.jpg 480w, img/fotos/casa-roja-porche-800.jpg 800w, img/fotos/casa-roja-porche-1200.jpg 1200w, img/fotos/casa-roja-porche-1600.jpg 1600w, img/fotos/casa-roja-porche-1920.jpg 1920w, img/fotos/casa-roja-porche-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="1536" alt="Porche de la casa roja con mesa y sillas de exterior" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:1.499"><button type="button" class="foto-btn" data-visor="porche" data-grupo="casa" aria-label="Ver más grande: Corredor de piedra con dos sillones de mimbre y plantas colgando"><picture data-foto="porche"><source type="image/avif" srcset="img/fotos/porche-480.avif 480w, img/fotos/porche-800.avif 800w, img/fotos/porche-1000.avif 1000w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/porche-480.webp 480w, img/fotos/porche-800.webp 800w, img/fotos/porche-1000.webp 1000w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/porche-800.jpg" srcset="img/fotos/porche-480.jpg 480w, img/fotos/porche-800.jpg 800w, img/fotos/porche-1000.jpg 1000w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="1000" height="667" alt="Corredor de piedra con dos sillones de mimbre y plantas colgando" loading="lazy" decoding="async"></picture></button></figure>
+          <figure class="foto" style="--r:0.750"><button type="button" class="foto-btn" data-visor="vista-corredor" data-grupo="casa" aria-label="Ver más grande: El prado y los árboles vistos desde la barandilla del corredor"><picture data-foto="vista-corredor"><source type="image/avif" srcset="img/fotos/vista-corredor-480.avif 480w, img/fotos/vista-corredor-800.avif 800w, img/fotos/vista-corredor-1200.avif 1200w, img/fotos/vista-corredor-1600.avif 1600w, img/fotos/vista-corredor-1920.avif 1920w, img/fotos/vista-corredor-2048.avif 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><source type="image/webp" srcset="img/fotos/vista-corredor-480.webp 480w, img/fotos/vista-corredor-800.webp 800w, img/fotos/vista-corredor-1200.webp 1200w, img/fotos/vista-corredor-1600.webp 1600w, img/fotos/vista-corredor-1920.webp 1920w, img/fotos/vista-corredor-2048.webp 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw"><img src="img/fotos/vista-corredor-800.jpg" srcset="img/fotos/vista-corredor-480.jpg 480w, img/fotos/vista-corredor-800.jpg 800w, img/fotos/vista-corredor-1200.jpg 1200w, img/fotos/vista-corredor-1600.jpg 1600w, img/fotos/vista-corredor-1920.jpg 1920w, img/fotos/vista-corredor-2048.jpg 2048w" sizes="(max-width: 699px) 92vw, (max-width: 1099px) 46vw, 30vw" width="2048" height="2730" alt="El prado y los árboles vistos desde la barandilla del corredor" loading="lazy" decoding="async"></picture></button></figure>
+        </div>
+      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. EL LUGAR EN 3D (módulo del agente Lugar 3D: js/lugar.js, css/lugar.css). El HTML de
+     [data-modulo="lugar"] es el respaldo que pone la Web: la foto del jardín con el hórreo y un texto breve. Lugar 3D
+     puede sustituirlo por un plan B 2D mejor dentro de su div. main.js monta Amaicha.lugar al acercarse (900 px). ============ -->
+<section id="lugar" class="sec lugar" aria-labelledby="t-lugar">
+  <div class="env lugar__cab">
+    <h2 id="t-lugar" class="sec-tit" data-aparece>Del acantilado al hórreo</h2>
+    <p class="sec-txt">Camango queda entre el Cantábrico y los Picos de Europa. La casa está en un prado con frutales, a menos de dos kilómetros en línea recta de los acantilados.</p>
+  </div>
+  <div data-modulo="lugar">
+    <figure class="lugar__respaldo">
+      <picture data-foto="jardin-horreo"><source type="image/avif" srcset="img/fotos/jardin-horreo-480.avif 480w, img/fotos/jardin-horreo-800.avif 800w, img/fotos/jardin-horreo-1200.avif 1200w, img/fotos/jardin-horreo-1600.avif 1600w" sizes="100vw"><source type="image/webp" srcset="img/fotos/jardin-horreo-480.webp 480w, img/fotos/jardin-horreo-800.webp 800w, img/fotos/jardin-horreo-1200.webp 1200w, img/fotos/jardin-horreo-1600.webp 1600w" sizes="100vw"><img src="img/fotos/jardin-horreo-800.jpg" srcset="img/fotos/jardin-horreo-480.jpg 480w, img/fotos/jardin-horreo-800.jpg 800w, img/fotos/jardin-horreo-1200.jpg 1200w, img/fotos/jardin-horreo-1600.jpg 1600w" sizes="100vw" width="1600" height="1067" alt="El jardín de Amaicha con el hórreo, las mesas de madera y las casas de piedra y teja" loading="lazy" decoding="async"></picture>
+      <figcaption>El jardín, con el hórreo y las casas.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 6. Alrededor: distancias SOLO de OSRM (ref/raw/rutas.json → construir.mjs). Sin el fichero, sin cifras ============ -->
+<section id="alrededor" class="sec alrededor" aria-labelledby="t-alrededor">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-alrededor" class="sec-tit" data-aparece>Alrededor</h2>
+      <p class="sec-txt">La playa de Guadamía y los bufones de Pría, a un paseo. Ribadesella y Llanes, a un rato. Los Picos de Europa, detrás.</p>
+    </header>
+    <div class="alrededor__in">
+      <figure class="alrededor__f"><button type="button" class="foto-btn" data-visor="aereo" data-grupo="alrededor" aria-label="Ver más grande: vista aérea de prados y bosque con el mar al fondo"><picture data-foto="aereo"><source type="image/avif" srcset="img/fotos/aereo-480.avif 480w, img/fotos/aereo-800.avif 800w, img/fotos/aereo-1200.avif 1200w, img/fotos/aereo-1600.avif 1600w, img/fotos/aereo-1920.avif 1920w, img/fotos/aereo-2048.avif 2048w" sizes="(max-width: 899px) 92vw, 40vw"><source type="image/webp" srcset="img/fotos/aereo-480.webp 480w, img/fotos/aereo-800.webp 800w, img/fotos/aereo-1200.webp 1200w, img/fotos/aereo-1600.webp 1600w, img/fotos/aereo-1920.webp 1920w, img/fotos/aereo-2048.webp 2048w" sizes="(max-width: 899px) 92vw, 40vw"><img src="img/fotos/aereo-800.jpg" srcset="img/fotos/aereo-480.jpg 480w, img/fotos/aereo-800.jpg 800w, img/fotos/aereo-1200.jpg 1200w, img/fotos/aereo-1600.jpg 1600w, img/fotos/aereo-1920.jpg 1920w, img/fotos/aereo-2048.jpg 2048w" sizes="(max-width: 899px) 92vw, 40vw" width="2048" height="1152" alt="Vista aérea de prados, bosques y casas con el mar al fondo" loading="lazy" decoding="async"></picture></button></figure>
+      <div class="escalera">
+      <section class="esc esc--1" aria-labelledby="t-esc-costa">
+        <h3 class="esc__tit" id="t-esc-costa">La costa<small>Acantilados, playa y bufones</small></h3>
+        <ol class="esc__lista">
+          <li data-ruta="acantilados"><b>Los acantilados (El Infierno)</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">15 min</span><span class="cifra esc__km">4,4 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">37 min</span><span class="cifra esc__km">2,8 km</span></span></li>
+          <li data-ruta="guadamia"><b>Playa de Guadamía</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">10 min</span><span class="cifra esc__km">4,5 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">59 min</span><span class="cifra esc__km">4,4 km</span></span></li>
+          <li data-ruta="bufones"><b>Bufones de Pría</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">11 min</span><span class="cifra esc__km">4,8 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">1 h 07 min</span><span class="cifra esc__km">5 km</span></span></li>
+        </ol>
+      </section>
+      <section class="esc esc--2" aria-labelledby="t-esc-pueblos">
+        <h3 class="esc__tit" id="t-esc-pueblos">Los pueblos<small>Ribadesella y Llanes</small></h3>
+        <ol class="esc__lista">
+          <li data-ruta="ribadesella"><b>Ribadesella</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">10 min</span><span class="cifra esc__km">7,6 km</span></span><span class="esc__pie"><svg class="ico" aria-hidden="true"><use href="#i-pie"/></svg><span class="vh">A pie: </span><span class="cifra">1 h 06 min</span><span class="cifra esc__km">4,9 km</span></span></li>
+          <li data-ruta="llanes"><b>Llanes</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">24 min</span><span class="cifra esc__km">25,8 km</span></span></li>
+        </ol>
+      </section>
+      <section class="esc esc--3" aria-labelledby="t-esc-picos">
+        <h3 class="esc__tit" id="t-esc-picos">Los Picos de Europa<small>Por Cangas de Onís</small></h3>
+        <ol class="esc__lista">
+          <li data-ruta="cangas"><b>Cangas de Onís</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">26 min</span><span class="cifra esc__km">26,7 km</span></span></li>
+          <li data-ruta="covadonga"><b>Covadonga</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">37 min</span><span class="cifra esc__km">36,9 km</span></span></li>
+          <li data-ruta="lagos"><b>Lagos de Covadonga</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">55 min</span><span class="cifra esc__km">48,3 km</span></span></li>
+        </ol>
+      </section>
+      <section class="esc esc--4" aria-labelledby="t-esc-aeropuertos">
+        <h3 class="esc__tit" id="t-esc-aeropuertos">Aeropuertos<small>Para llegar</small></h3>
+        <ol class="esc__lista">
+          <li data-ruta="ovd"><b>Aeropuerto de Asturias</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">1 h 15 min</span><span class="cifra esc__km">104,3 km</span></span></li>
+          <li data-ruta="sdr"><b>Aeropuerto de Santander</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">1 h 20 min</span><span class="cifra esc__km">111,2 km</span></span></li>
+          <li data-ruta="bio"><b>Aeropuerto de Bilbao</b><span class="esc__coche"><svg class="ico" aria-hidden="true"><use href="#i-coche"/></svg><span class="cifra">2 h 24 min</span><span class="cifra esc__km">202,8 km</span></span></li>
+        </ol>
+      </section>
+      </div>
+    </div>
+    <p class="alrededor__fino">En coche, por carretera; a pie, por caminos. Calculado con OSRM sobre datos de © colaboradores de OpenStreetMap el 25 de noviembre de 2026: tiempos sin tráfico ni paradas, orientativos. Al centro de Ribadesella hay 7,6 km por carretera (4,3 km en línea recta).</p>
+  </div>
+</section>
+
+<!-- ============ 7. Reseñas (Google: 9,6 con 198 reseñas; hay recuento suficiente para decirlo) ============ -->
+<section id="resenas" class="sec resenas" aria-labelledby="t-resenas">
+  <div class="env">
+    <div class="resenas__in">
+      <p class="resenas__nota" aria-hidden="true"><span class="cifra">9,6</span><span class="resenas__sobre">sobre 10</span></p>
+      <div class="resenas__txt">
+        <h2 id="t-resenas" class="sec-tit" data-aparece>Excelente, en Google</h2>
+        <p class="resenas__dato"><span class="vh">Nota de 9,6 sobre 10, </span>con <span class="cifra">198</span> reseñas en su ficha de Google.</p>
+        <ul class="resenas__tipos" aria-label="Nota por forma de quedarse, como la enseña su web">
+          <li><span>Hotel</span><b class="cifra">9,6</b></li>
+          <li><span>Apartamentos</span><b class="cifra">9,6</b></li>
+          <li><span>Grupos</span><b class="cifra">9,9</b></li>
+        </ul>
+        <p><a class="btn btn--oscuro" href="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJjZLj6V7hSQ0RwYP4JGEfGzw" target="_blank" rel="noopener">Leer las reseñas en Google<span class="vh"> (se abre en otra pestaña)</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. Reservar: buscador propio (js/reserva.js) que abre su motor REAL (Amenitiz) en un iframe solo al
+     pedirlo; dentro lleva Google Tag Manager. Amenitiz acepta por URL start_date, end_date, adults y children ============ -->
+<section id="reservar" class="sec reservar" aria-labelledby="t-reservar">
+  <div class="env">
+    <header class="sec-cab">
+      <h2 id="t-reservar" class="sec-tit" data-aparece>Ver fechas y reservar</h2>
+      <p class="sec-txt">Elige llegada, salida y cuántos sois. Se abre su motor de reservas con tu búsqueda hecha.</p>
+    </header>
+<!-- el buscador (js/reserva.js): calendario propio, personas y tipo. Al pulsar «Buscar en su motor» se CREA el iframe
+     de su Amenitiz con ?start_date=…&end_date=…&adults=…&children=… (antes no existe: dentro lleva Google Tag Manager). -->
+<p class="real" role="note"><span class="real__greca" aria-hidden="true"></span><span><b>Es su motor de reservas real.</b> Lo que se abre aquí es el motor de Amaicha (Amenitiz): las reservas que hagas dentro son de verdad. Esta web es una propuesta y no guarda nada.</span></p>
+
+<form class="busca" id="busca" novalidate>
+  <div class="busca__cal">
+    <div class="busca__fechas" aria-live="polite">
+      <p><span class="busca__eti">Llegada</span><b data-fecha="entrada">Elige día</b></p>
+      <p><span class="busca__eti">Salida</span><b data-fecha="salida">Elige día</b></p>
+      <p class="busca__noches cifra" data-noches></p>
+    </div>
+    <div class="cal" id="cal" role="group" aria-label="Calendario de llegada y salida">
+      <noscript><p>El calendario necesita JavaScript. Abre su <a href="https://amaicha-complejo-rural.amenitiz.io/es/booking/room" target="_blank" rel="noopener">motor de reservas</a> o llama al <a href="tel:+34661598965">661 59 89 65</a>.</p></noscript>
+    </div>
+    <p class="busca__resumen" data-resumen>Elige el día de llegada.</p>
+  </div>
+
+  <div class="busca__lado">
+    <fieldset class="busca__tipo">
+      <legend class="busca__eti">Cómo quieres quedarte</legend>
+      <label class="chip"><input type="radio" name="tipo" value="hotel" checked><span>Habitación</span></label>
+      <label class="chip"><input type="radio" name="tipo" value="apartamentos"><span>Apartamento</span></label>
+      <label class="chip"><input type="radio" name="tipo" value="casa"><span>Casa entera</span></label>
+    </fieldset>
+    <div class="busca__pers">
+      <div class="paso" data-paso="adultos">
+        <span class="busca__eti" id="eti-adultos">Adultos</span>
+        <button type="button" data-acc="menos" aria-label="Un adulto menos">−</button>
+        <output class="cifra" aria-labelledby="eti-adultos" data-valor>2</output>
+        <button type="button" data-acc="mas" aria-label="Un adulto más">+</button>
+      </div>
+      <div class="paso" data-paso="ninos">
+        <span class="busca__eti" id="eti-ninos">Niños <small>(0 a 17)</small></span>
+        <button type="button" data-acc="menos" aria-label="Un niño menos">−</button>
+        <output class="cifra" aria-labelledby="eti-ninos" data-valor>0</output>
+        <button type="button" data-acc="mas" aria-label="Un niño más">+</button>
+      </div>
+    </div>
+    <p class="busca__pista" data-pista></p>
+    <button class="btn btn--acento busca__ir" type="submit" id="busca-ir">Buscar en su motor</button>
+    <p class="busca__otros"><button type="button" class="enlace" id="motor-sin-fechas">Abrir su calendario sin fechas</button></p>
+  </div>
+</form>
+
+<div class="motor" id="motor" aria-live="polite">
+  <div class="motor__vacio" id="motor-vacio">
+    <span class="motor__greca" aria-hidden="true"></span>
+    <p>Aquí se abrirá su motor de reservas con tu búsqueda: noches libres, precio y la reserva.</p>
+  </div>
+  <p class="motor__estado" id="motor-estado"></p>
+  <p class="motor__fuera" id="motor-fuera-p" hidden><a id="motor-fuera" href="https://amaicha-complejo-rural.amenitiz.io/es/booking/room" target="_blank" rel="noopener">Abrir su motor en otra pestaña<span class="vh"> (se abre en otra pestaña)</span></a></p>
+</div>
+
+<p class="reservar__alt">¿Prefieres hablar con Cristina? <a class="cifra" href="tel:+34661598965">661 59 89 65</a> o <a href="mailto:cris@amaicha.es">cris@amaicha.es</a></p>
+  </div>
+</section>
+
+<!-- ============ 9. Contacto y mapa (Google Maps sin clave, solo tras pulsar) ============ -->
+<section id="contacto" class="sec contacto" aria-labelledby="t-contacto">
+  <div class="env contacto__in">
+    <div class="contacto__txt">
+      <h2 id="t-contacto" class="sec-tit" data-aparece>Cómo llegar</h2>
+      <address class="contacto__dir">Camango 44<br>33568 Ribadesella (Asturias)<br><span class="contacto__fino">Parroquia de Collera</span></address>
+      <p class="contacto__lineas"><a class="cifra" href="tel:+34661598965">661 59 89 65</a><a href="mailto:cris@amaicha.es">cris@amaicha.es</a><a href="https://www.facebook.com/amaicha.es/" target="_blank" rel="noopener">Facebook<span class="vh"> (se abre en otra pestaña)</span></a></p>
+      <p class="contacto__ruta">Desde Ribadesella, <span class="cifra">7,6 km</span> y <span class="cifra">10 min</span> en coche; desde Llanes, <span class="cifra">25,8 km</span> y <span class="cifra">24 min</span>. El aeropuerto de Asturias queda a <span class="cifra">1 h 15 min</span> y el de Santander a <span class="cifra">1 h 20 min</span>.</p>
+    </div>
+    <div class="mapa" id="mapa" data-q="43.443446,-5.012529">
+      <button type="button" class="map-consent" id="mapa-btn">
+        <span class="map-consent__greca" aria-hidden="true"></span>
+        <b>Ver el mapa</b>
+        <span>Al pulsar se carga Google Maps, que puede instalar sus cookies.</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ pie (monte): el logo entero. La greca se CIERRA al llegar (lo que la portada abrió, el pie lo cierra):
+     anillo de fuera y ganchos, anillo medio, cuadrado y punto, de fuera adentro. Con movimiento reducido, ya cerrada ============ -->
+<footer class="pie" id="pie">
+  <div class="env">
+    <div class="pie__arriba">
+      <a class="pie__logo" href="./" aria-label="Amaicha, a la portada">
+        <svg class="pie__greca" viewBox="-9.708 -7.021 19.417 14.042" aria-hidden="true" focusable="false"><g class="pg pg-1"><path transform="rotate(45)" d="M-4.965 -4.965 4.965 -4.965 4.965 4.965 -4.965 4.965ZM-3.965 3.965 3.965 3.965 3.965 -3.965 -3.965 -3.965ZM4.965 -4.965 8.765 -4.965 8.765 -3.965 4.965 -3.965ZM3.965 -8.765 4.965 -8.765 4.965 -4.965 3.965 -4.965ZM7.765 -4.965 8.765 -4.965 8.765 -0.272 7.765 -0.272ZM0.273 -8.765 4.965 -8.765 4.965 -7.765 0.273 -7.765ZM5.865 -1.272 8.765 -1.272 8.765 -0.272 5.865 -0.272ZM0.273 -8.765 1.273 -8.765 1.273 -5.865 0.273 -5.865ZM5.865 -3.064 6.865 -3.064 6.865 -0.272 5.865 -0.272ZM0.273 -6.865 3.064 -6.865 3.064 -5.865 0.273 -5.865ZM-8.765 3.965 -4.965 3.965 -4.965 4.965 -8.765 4.965ZM-4.965 4.965 -3.965 4.965 -3.965 8.765 -4.965 8.765ZM-8.765 0.273 -7.765 0.273 -7.765 4.965 -8.765 4.965ZM-4.965 7.765 -0.272 7.765 -0.272 8.765 -4.965 8.765ZM-8.765 0.273 -5.865 0.273 -5.865 1.273 -8.765 1.273ZM-1.272 5.865 -0.272 5.865 -0.272 8.765 -1.272 8.765ZM-6.865 0.273 -5.865 0.273 -5.865 3.064 -6.865 3.064ZM-3.064 5.865 -0.272 5.865 -0.272 6.865 -3.064 6.865Z"/></g><g class="pg pg-2"><path transform="rotate(45)" d="M-3.064 -3.064 3.064 -3.064 3.064 3.064 -3.064 3.064ZM-2.064 2.064 2.064 2.064 2.064 -2.064 -2.064 -2.064Z"/></g><g class="pg pg-3"><path transform="rotate(45)" d="M-1.164 -1.164 1.164 -1.164 1.164 1.164 -1.164 1.164ZM0.18 0A0.18 0.18 0 0 0 -0.179 0A0.18 0.18 0 0 0 0.18 0Z"/></g></svg>
+        <span class="pie__palabra" aria-hidden="true"></span>
+      </a>
+      <div class="pie__cols">
+        <div>
+          <h2 class="pie__h">Dónde</h2>
+          <p>Camango 44<br>33568 Ribadesella (Asturias)</p>
+          <p><a href="#contacto">Cómo llegar</a></p>
+        </div>
+        <div>
+          <h2 class="pie__h">Reservas</h2>
+          <p><a class="cifra" href="tel:+34661598965">661 59 89 65</a><br><a href="mailto:cris@amaicha.es">cris@amaicha.es</a></p>
+          <p><a href="#reservar">Su motor de reservas</a></p>
+        </div>
+        <div>
+          <h2 class="pie__h">La casa</h2>
+          <p><a href="#quedarse">Tres formas de quedarse</a><br><a href="#casa">Por estancias</a><br><a href="#lugar">El lugar</a><br><a href="#alrededor">Alrededor</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="pie__legal">
+      <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="accesibilidad.html">Accesibilidad</a><button type="button" id="abrir-cookies">Preferencias de cookies</button></nav>
+      <p>© <span id="anno">2026</span> Amaicha · Camango, Ribadesella (Asturias)</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cookies" id="cookies" role="region" aria-label="Aviso de cookies" hidden>
+  <p>Sin cookies de análisis ni de publicidad: solo se guarda que has visto este aviso. Las letras vienen de Google Fonts; el mapa de Google y el motor de reservas (Amenitiz, con sus cookies) solo se cargan si los pides. <a href="cookies.html">Más información</a></p>
+  <div class="cookies__acc">
+    <button class="btn btn--oscuro" type="button" id="ck-si">Entendido</button>
+    <button class="btn btn--linea" type="button" id="ck-no">Solo lo necesario</button>
+  </div>
+</div>
+
+<!-- MANDO DE MAQUETA (no viaja al cliente): solo con ?revision -->
+<div class="mando" id="mando" role="group" aria-label="Dos versiones de la misma web" hidden>
+  <span class="mando__eti">Versión</span>
+  <button type="button" data-densidad="greca" aria-pressed="true">Greca</button>
+  <button type="button" data-densidad="sobria" aria-pressed="false">Sobria</button>
+</div>
+<!-- fin del MANDO DE MAQUETA -->
+
+<!-- visor de fotos (se abre por el NOMBRE de la foto) -->
+<dialog class="visor" id="visor" aria-label="Foto ampliada">
+  <figure class="visor__fig">
+    <img id="visor-img" alt="" width="1600" height="1067">
+    <figcaption><span id="visor-pie"></span> <span class="visor__n cifra" id="visor-n"></span></figcaption>
+  </figure>
+  <button type="button" class="visor__btn visor__btn--ant" id="visor-ant" aria-label="Foto anterior"><svg class="ico" aria-hidden="true"><use href="#i-flecha-izq"/></svg></button>
+  <button type="button" class="visor__btn visor__btn--sig" id="visor-sig" aria-label="Foto siguiente"><svg class="ico" aria-hidden="true"><use href="#i-flecha-der"/></svg></button>
+  <button type="button" class="visor__cerrar" id="visor-cerrar" aria-label="Cerrar"><svg class="ico" aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+</dialog>
+
+<!-- el foco del teclado: un marco con las esquinas en escalón, como la greca (lo coloca main.js) -->
+<svg class="foco-greca" id="foco-greca" aria-hidden="true" focusable="false"><path/></svg>
+
+<!-- la geometría de la greca (marca/greca.json, del ajuste de scripts/marca-greca.py), para la portada y el pie -->
+<script type="application/json" id="datos-greca">{"nota":"Entramado de la greca en unidades de banda, en el espacio girado 45° (cuadrados). Para dibujarla: rotate(45). macizo = semilado del cuadrado central; anillos = [semilado interior, exterior]; rects = los cuatro ganchos.","colores":{"greca":"#836759","palabra":"#441F0B"},"medidas":{"h0":1.1638,"g":0.9004,"yb":-0.2725,"rd":0.1795},"macizo":1.1638,"punto":0.1795,"anillos":[[2.0642,3.0642],[3.9646,4.9646]],"rects":[[4.9646,-4.9646,8.7653,-3.9646],[3.9646,-8.7653,4.9646,-4.9646],[7.7653,-4.9646,8.7653,-0.2725],[0.2725,-8.7653,4.9646,-7.7653],[5.8649,-1.2725,8.7653,-0.2725],[0.2725,-8.7653,1.2725,-5.8649],[5.8649,-3.0642,6.8649,-0.2725],[0.2725,-6.8649,3.0642,-5.8649],[-8.7653,3.9646,-4.9646,4.9646],[-4.9646,4.9646,-3.9646,8.7653],[-8.7653,0.2725,-7.7653,4.9646],[-4.9646,7.7653,-0.2725,8.7653],[-8.7653,0.2725,-5.8649,1.2725],[-1.2725,5.8649,-0.2725,8.7653],[-6.8649,0.2725,-5.8649,3.0642],[-3.0642,5.8649,-0.2725,6.8649]],"semi":{"ancho":9.7085,"alto":7.0209},"palabra":{"arriba":6.7866,"abajo":11.7321},"iou":{"greca_limpia":0.7281,"greca_libre":0.7389,"contra_logo_blanco":0.7274},"viewBox":{"greca":"-9.708 -7.021 19.417 14.042","logo":"-10.309 -7.021 20.018 18.753","palabra":"-10.309 6.787 19.916 4.946"},"foco":[0.55,0.42],"foto":{"ancho":1600,"alto":1067}}</script>
+<!-- los módulos: la portada (Web) y el 3D (Lugar 3D). Si falta el de Lugar, la página no falla: se queda el respaldo -->
+<script src="js/portada.js?v=196ea10f" defer></script>
+<script src="js/lugar.js?v=4ea3f755" defer></script>
+<!-- la web -->
+<script src="js/reserva.js?v=55ea90f9" defer></script>
+<script src="js/main.js?v=1b8e930d" defer></script>
+</body>
+</html>

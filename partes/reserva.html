@@ -1,0 +1,54 @@
+<!-- el buscador (js/reserva.js): calendario propio, personas y tipo. Al pulsar «Buscar en su motor» se CREA el iframe
+     de su Amenitiz con ?start_date=…&end_date=…&adults=…&children=… (antes no existe: dentro lleva Google Tag Manager). -->
+<p class="real" role="note"><span class="real__greca" aria-hidden="true"></span><span><b>Es su motor de reservas real.</b> Lo que se abre aquí es el motor de Amaicha (Amenitiz): las reservas que hagas dentro son de verdad. Esta web es una propuesta y no guarda nada.</span></p>
+
+<form class="busca" id="busca" novalidate>
+  <div class="busca__cal">
+    <div class="busca__fechas" aria-live="polite">
+      <p><span class="busca__eti">Llegada</span><b data-fecha="entrada">Elige día</b></p>
+      <p><span class="busca__eti">Salida</span><b data-fecha="salida">Elige día</b></p>
+      <p class="busca__noches cifra" data-noches></p>
+    </div>
+    <div class="cal" id="cal" role="group" aria-label="Calendario de llegada y salida">
+      <noscript><p>El calendario necesita JavaScript. Abre su <a href="https://amaicha-complejo-rural.amenitiz.io/es/booking/room" target="_blank" rel="noopener">motor de reservas</a> o llama al <a href="tel:+34661598965">661 59 89 65</a>.</p></noscript>
+    </div>
+    <p class="busca__resumen" data-resumen>Elige el día de llegada.</p>
+  </div>
+
+  <div class="busca__lado">
+    <fieldset class="busca__tipo">
+      <legend class="busca__eti">Cómo quieres quedarte</legend>
+      <label class="chip"><input type="radio" name="tipo" value="hotel" checked><span>Habitación</span></label>
+      <label class="chip"><input type="radio" name="tipo" value="apartamentos"><span>Apartamento</span></label>
+      <label class="chip"><input type="radio" name="tipo" value="casa"><span>Casa entera</span></label>
+    </fieldset>
+    <div class="busca__pers">
+      <div class="paso" data-paso="adultos">
+        <span class="busca__eti" id="eti-adultos">Adultos</span>
+        <button type="button" data-acc="menos" aria-label="Un adulto menos">−</button>
+        <output class="cifra" aria-labelledby="eti-adultos" data-valor>2</output>
+        <button type="button" data-acc="mas" aria-label="Un adulto más">+</button>
+      </div>
+      <div class="paso" data-paso="ninos">
+        <span class="busca__eti" id="eti-ninos">Niños <small>(0 a 17)</small></span>
+        <button type="button" data-acc="menos" aria-label="Un niño menos">−</button>
+        <output class="cifra" aria-labelledby="eti-ninos" data-valor>0</output>
+        <button type="button" data-acc="mas" aria-label="Un niño más">+</button>
+      </div>
+    </div>
+    <p class="busca__pista" data-pista></p>
+    <button class="btn btn--acento busca__ir" type="submit" id="busca-ir">Buscar en su motor</button>
+    <p class="busca__otros"><button type="button" class="enlace" id="motor-sin-fechas">Abrir su calendario sin fechas</button></p>
+  </div>
+</form>
+
+<div class="motor" id="motor" aria-live="polite">
+  <div class="motor__vacio" id="motor-vacio">
+    <span class="motor__greca" aria-hidden="true"></span>
+    <p>Aquí se abrirá su motor de reservas con tu búsqueda: noches libres, precio y la reserva.</p>
+  </div>
+  <p class="motor__estado" id="motor-estado"></p>
+  <p class="motor__fuera" id="motor-fuera-p" hidden><a id="motor-fuera" href="https://amaicha-complejo-rural.amenitiz.io/es/booking/room" target="_blank" rel="noopener">Abrir su motor en otra pestaña<span class="vh"> (se abre en otra pestaña)</span></a></p>
+</div>
+
+<p class="reservar__alt">¿Prefieres hablar con Cristina? <a class="cifra" href="tel:+34661598965">661 59 89 65</a> o <a href="mailto:cris@amaicha.es">cris@amaicha.es</a></p>

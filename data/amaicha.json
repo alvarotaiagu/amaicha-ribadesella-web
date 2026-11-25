@@ -1,0 +1,121 @@
+{
+ "fuente": "ref/DATOS-AMAICHA.md (recogidos 2026-11-25 de amaicha.es y su aviso legal). Lo que no está ahí no va en la web.",
+ "nombre": "Amaicha",
+ "contacto": {
+  "telefono": "+34661598965",
+  "telefonoTexto": "661 59 89 65",
+  "correo": "cris@amaicha.es",
+  "direccion": "Camango 44",
+  "cp": "33568",
+  "municipio": "Ribadesella",
+  "provincia": "Asturias",
+  "parroquia": "Collera",
+  "facebook": "https://www.facebook.com/amaicha.es/",
+  "anfitriona": "Cristina"
+ },
+ "titular": { "nombre": "Cristina Durand Zurdo", "nif": "02653919H", "domicilio": "Camango 44, 33568 Ribadesella (Asturias)", "registroTuristico": null },
+ "resenas": {
+  "nota": "9,6",
+  "recuento": 198,
+  "fuente": "Google",
+  "etiqueta": "Excelente",
+  "porTipo": [ { "tipo": "Hotel", "nota": "9,6" }, { "tipo": "Apartamentos", "nota": "9,6" }, { "tipo": "Grupos", "nota": "9,9" } ],
+  "ficha": "https://www.google.com/maps/search/?api=1&query=Google&query_place_id=ChIJjZLj6V7hSQ0RwYP4JGEfGzw"
+ },
+ "amenitiz": {
+  "base": "https://amaicha-complejo-rural.amenitiz.io/es/booking/room",
+  "parametros": "start_date=AAAA-MM-DD&end_date=AAAA-MM-DD&adults=N&children=N (comprobado con Playwright el 2026-11-25: el motor abre con las fechas y las personas puestas y enseña los resultados)",
+  "maxAdultos": 12,
+  "maxNinos": 12
+ },
+ "formas": [
+  {
+   "id": "hotel",
+   "nombre": "Hotel",
+   "titulo": "La casona, por habitaciones",
+   "texto": "Una casona asturiana de piedra con decoración rústica. Todas las habitaciones tienen baño privado y una ventana al exterior que da a los jardines.",
+   "cifras": [ { "v": "7", "t": "habitaciones dobles" }, { "v": "1", "t": "individual" }, { "v": "8", "t": "con baño privado" } ],
+   "servicios": [
+    { "icono": "cama", "nombre": "Matrimonio o dos camas", "detalle": "Tú eliges cómo quieres la doble" },
+    { "icono": "bano", "nombre": "Baño privado", "detalle": "En cada habitación" },
+    { "icono": "lluvia", "nombre": "Ducha de lluvia", "detalle": "Con secador" },
+    { "icono": "ventana", "nombre": "Ventana al jardín", "detalle": "Todas son exteriores" },
+    { "icono": "limpieza", "nombre": "Limpieza diaria", "detalle": "" },
+    { "icono": "calor", "nombre": "Calefacción", "detalle": "" },
+    { "icono": "wifi", "nombre": "Wifi y TV", "detalle": "" },
+    { "icono": "hoja", "nombre": "Amenities ecológicos", "detalle": "" }
+   ],
+   "condiciones": [ "Precio y noches libres: en su motor de reservas, al final de la página." ],
+   "foto": "hab-matrimonio",
+   "fotoAlt": "Habitación doble con cama de matrimonio, cabecero de madera y ventana con contraventanas"
+  },
+  {
+   "id": "apartamentos",
+   "nombre": "Apartamentos",
+   "titulo": "Dos apartamentos con terraza",
+   "texto": "Dos apartamentos independientes en el mismo edificio. Cada uno con dos dormitorios dobles, salón amplio y luminoso, cocina totalmente equipada y terraza privada.",
+   "cifras": [ { "v": "2", "t": "apartamentos" }, { "v": "4", "t": "personas en cada uno" }, { "v": "2", "t": "dormitorios dobles" } ],
+   "servicios": [
+    { "icono": "cama", "nombre": "Una de matrimonio y una de dos camas", "detalle": "Los dos dormitorios, dobles" },
+    { "icono": "cocina", "nombre": "Cocina equipada", "detalle": "Abierta al salón" },
+    { "icono": "terraza", "nombre": "Terraza privada", "detalle": "Para cada apartamento" },
+    { "icono": "bano", "nombre": "Baño completo con ventana", "detalle": "Ducha, bidé, toallas y secador" },
+    { "icono": "llave", "nombre": "Entrega de llaves", "detalle": "" },
+    { "icono": "calor", "nombre": "Calefacción", "detalle": "" },
+    { "icono": "wifi", "nombre": "Wifi y TV", "detalle": "" },
+    { "icono": "columpio", "nombre": "Área infantil", "detalle": "En el jardín común" }
+   ],
+   "condiciones": [ "Pensados para familias.", "Aparcamiento privado y jardín común.", "Mascotas: pregunta antes de reservar." ],
+   "foto": "apto-salon",
+   "fotoAlt": "Salón de un apartamento con sofá azul, cocina abierta al fondo y suelo de baldosa"
+  },
+  {
+   "id": "casa",
+   "nombre": "Casa entera",
+   "titulo": "Toda la casona para el grupo",
+   "texto": "Para reuniones de familia, amigos o retiros: la casona entera, con sus zonas comunes amplias, la cocina equipada y el jardín.",
+   "cifras": [ { "v": "8", "t": "habitaciones" }, { "v": "7 + 1", "t": "dobles e individual" }, { "v": "30", "t": "días: cancelación gratis" } ],
+   "servicios": [
+    { "icono": "bano", "nombre": "Baño privado", "detalle": "En las ocho habitaciones" },
+    { "icono": "sofa", "nombre": "Zonas comunes amplias", "detalle": "Salón y comedor de mesa larga" },
+    { "icono": "cocina", "nombre": "Cocina equipada", "detalle": "Para el grupo" },
+    { "icono": "arbol", "nombre": "Jardín", "detalle": "Con el hórreo" },
+    { "icono": "calor", "nombre": "Calefacción", "detalle": "" },
+    { "icono": "ventana", "nombre": "Ventanas exteriores", "detalle": "En todas las habitaciones" }
+   ],
+   "condiciones": [ "Sin eventos ni despedidas.", "No se admiten animales.", "Cancelación gratuita hasta 30 días antes." ],
+   "foto": "comun-comedor",
+   "fotoAlt": "Comedor de la casona con una mesa larga, sillas de madera y lámpara de hierro bajo las vigas"
+  }
+ ],
+ "desayuno": [ "Pan", "bizcochos", "mermeladas caseras", "tomate rallado", "aguacate", "fruta de temporada de sus árboles" ],
+ "estancias": [
+  { "id": "comun", "nombre": "La zona común", "corto": "Común", "texto": "Piedra, vigas de madera vista, la chimenea y el comedor de mesa larga.", "fotos": [
+   { "n": "comun-salon", "alt": "Salón con sofás azules y cojines rojos; al fondo, la escalera de madera y el muro de piedra" },
+   { "n": "comun-comedor", "alt": "Comedor de mesa larga con sillas de madera bajo una lámpara de hierro" },
+   { "n": "comun-chimenea", "alt": "Salón con sofás claros frente a la chimenea y un ventanal al jardín" },
+   { "n": "comun-escalera", "alt": "Comedor junto a la escalera de madera y el muro de piedra" },
+   { "n": "comun-ventanales", "alt": "Salón de sofás rojos junto a los ventanales y la mesa del comedor" },
+   { "n": "comun-cocina", "alt": "Cocina amplia con encimeras de acero y ventana al jardín" } ] },
+  { "id": "habitaciones", "nombre": "Las habitaciones del hotel", "corto": "Hotel", "texto": "Siete dobles y una individual, cada una con su baño y su ventana al jardín.", "fotos": [
+   { "n": "hab-matrimonio", "alt": "Habitación doble con cama de matrimonio y contraventanas de madera" },
+   { "n": "hab-azul", "alt": "Habitación de paredes azules con dos camas y balcón" },
+   { "n": "hab-morada", "alt": "Habitación con cabecero morado y aplique de pared" },
+   { "n": "hab-flores", "alt": "Habitación con colcha de flores y cabecero tapizado" },
+   { "n": "hab-dos-camas", "alt": "Habitación con dos camas y cabecero de forja" },
+   { "n": "hab-bano", "alt": "Baño con mampara, lavabo y toallero" } ] },
+  { "id": "apartamentos-fotos", "nombre": "Los apartamentos", "corto": "Apartamentos", "texto": "Salón con cocina abierta, dos dormitorios dobles y su terraza.", "fotos": [
+   { "n": "apto-salon", "alt": "Salón de apartamento con sofá azul y cocina abierta" },
+   { "n": "apto-comedor", "alt": "Comedor de apartamento bajo el techo de vigas, con ventana al prado" },
+   { "n": "apto-cocina", "alt": "Cocina de madera con lavadora y horno, abierta al comedor" },
+   { "n": "apto-matrimonio", "alt": "Dormitorio de matrimonio con vigas de madera" },
+   { "n": "apto-dos-camas", "alt": "Dormitorio con dos camas y puerta a la terraza" } ] },
+  { "id": "jardin", "nombre": "Jardín, hórreo y corredor", "corto": "Jardín", "texto": "El hórreo sobre sus pegoyos, las mesas de madera, los frutales y el corredor de sillones de mimbre.", "fotos": [
+   { "n": "jardin-casona", "alt": "Jardín de césped con la casona de piedra al fondo y los tejados de teja" },
+   { "n": "horreo-jardin", "alt": "El hórreo sobre sus pegoyos con el jardín, una sombrilla y una mesa de picnic" },
+   { "n": "casa-roja", "alt": "Casa roja de dos plantas en el prado, con frutales" },
+   { "n": "casa-roja-porche", "alt": "Porche de la casa roja con mesa y sillas de exterior" },
+   { "n": "porche", "alt": "Corredor de piedra con dos sillones de mimbre y plantas colgando" },
+   { "n": "vista-corredor", "alt": "El prado y los árboles vistos desde la barandilla del corredor" } ] }
+ ]
+}
